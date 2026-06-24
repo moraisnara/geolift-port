@@ -1,0 +1,14 @@
+Z0 (90, 38)  Z1 (90,)  Y0 (105, 38)  donors=38  t_int=91
+  solver status: optimal
+
+=== (A) Direct simplex QP (cvxpy/CLARABEL) ===
+  fit time           :    27.22 ms
+  weights max abs diff vs R: 4.253e-07
+  y_hat  max abs diff vs R : 4.900e-04
+  ATT  python / R     : 155.5557 / 155.5559   (diff=-0.0002)
+
+=== (B) pysyncon.Synth ===
+  FAILED: IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+Wrote C:\Users\naral\Desktop\Nara\DP6\Geolift\exploration\results\fidelity.json
+Done.

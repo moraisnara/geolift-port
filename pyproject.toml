@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geolift-fast"
+version = "0.1.0"
+description = "Fast Python port of GeoLift's market-selection / power inference (vectorized conformal permutations + effect-size-invariant fit reuse)."
+readme = "geolift_py/README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Nara" }]
+keywords = ["geolift", "synthetic-control", "geo-experiments", "causal-inference", "marketing"]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "scipy>=1.10",
+    "osqp>=0.6",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.6"]
+
+[project.urls]
+# Update this to your repository once pushed; it is what `pip install git+<url>` targets.
+Homepage = "https://github.com/your-org/geolift-fast"
+
+# The library is the `geolift_fast` package under geolift_py/. The analysis/benchmark
+# scripts alongside it are NOT part of the installable package.
+[tool.setuptools.packages.find]
+where = ["geolift_py"]
+include = ["geolift_fast*"]

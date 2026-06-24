@@ -1,0 +1,15 @@
+[
+  {
+    "strategy": "(A) Direct simplex QP (cvxpy/CLARABEL)",
+    "weights_max_abs_diff": 4.2530532116946684e-07,
+    "yhat_max_abs_diff": 0.0004900164981336275,
+    "ATT_python": 155.5557,
+    "ATT_R": 155.5559,
+    "fit_time_ms": 27.22
+  },
+  {
+    "strategy": "(B) pysyncon.Synth",
+    "status": "failed",
+    "error": "IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "method": "conformal grid=250, ns=1000",
+    "time_s": 19.44,
+    "lower": -2450.7,
+    "upper": 11349.9
+  },
+  {
+    "method": "jackknife+ (direct)",
+    "time_s": 14.56,
+    "lower": -2450.7,
+    "upper": 11349.9
+  }
+]

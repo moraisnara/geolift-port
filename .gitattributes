@@ -1,0 +1,13 @@
+# Normalize line endings: store LF in the repo, check out native locally.
+* text=auto
+
+# Always LF for scripts (run on Linux/GCP)
+*.py text eol=lf
+*.R text eol=lf
+*.sh text eol=lf
+
+# Treat data/artifacts as binary-ish to avoid line-ending churn
+*.csv text
+*.png binary
+*.rda binary
+*.RData binary

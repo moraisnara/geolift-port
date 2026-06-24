@@ -1,0 +1,35 @@
+{
+  "setup": {
+    "seed": 42,
+    "n_combos": 23,
+    "n_cells": 115,
+    "effect_sizes": [
+      -0.1,
+      -0.05,
+      0.0,
+      0.05,
+      0.1
+    ],
+    "ns": 1000,
+    "tp": 14,
+    "alpha": 0.1,
+    "panel": "24 markets x 220 periods"
+  },
+  "timing": {
+    "r_seconds": 9.75,
+    "python_seconds": 0.712,
+    "speedup_sequential": 13.69,
+    "python_mp_seconds": 2.22,
+    "speedup_mp": 4.39,
+    "r_ms_per_cell": 84.8,
+    "python_ms_per_cell": 6.2
+  },
+  "agreement": {
+    "significance_agreement": 1.0,
+    "att_max_abs_diff": 3.72e-07,
+    "scaled_l2_max_abs_diff": 7.41e-09,
+    "pvalue_mean_abs_diff": 0.0034,
+    "selected_mde_agreement": 1.0,
+    "ranking_top5_overlap": 1.0
+  }
+}

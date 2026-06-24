@@ -1,0 +1,29 @@
+build tools: TRUE 
+Using GitHub PAT from the git credential store.
+Downloading GitHub repo ebenmichael/augsynth@06415b4da556d5f8c9521abdced7b82b1487947c
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file 'C:\Users\naral\AppData\Local\Temp\RtmpElRknE\remotes50b46dd86a19\ebenmichael-augsynth-06415b4/DESCRIPTION' ... OK
+* preparing 'augsynth':
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building 'augsynth_0.2.0.tar.gz'
+
+Instalando pacote em 'C:/Users/naral/AppData/Local/R/win-library/4.6'
+(como 'lib' não foi especificado)
+* installing *source* package 'augsynth' ...
+** this is package 'augsynth' version '0.2.0'
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (augsynth)
+FINAL augsynth available: TRUE 

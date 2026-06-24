@@ -1,0 +1,64 @@
+List of 18
+ $ results            :List of 17
+  ..$ weights            : num [1:38, 1] 1.26e-09 4.65e-02 6.96e-10 1.34e-01 2.57e-09 ...
+  .. ..- attr(*, "dimnames")=List of 2
+  ..$ l2_imbalance       : num 909
+  ..$ scaled_l2_imbalance: num 0.164
+  ..$ mhat               : num [1:40, 1:105] 4509 2589 4163 2863 4191 ...
+  ..$ lambda             : NULL
+  ..$ ridge_mhat         : num [1:40, 1:15] 0 0 0 0 0 0 0 0 0 0 ...
+  ..$ synw               : num [1:38] 1.26e-09 4.65e-02 6.96e-10 1.34e-01 2.57e-09 ...
+  ..$ lambdas            : NULL
+  ..$ lambda_errors      : NULL
+  ..$ lambda_errors_se   : NULL
+  ..$ data               :List of 5
+  ..$ progfunc           : chr "none"
+  ..$ scm                : logi TRUE
+  ..$ fixedeff           : logi TRUE
+  ..$ extra_args         : list()
+  ..$ call               : language single_augsynth(form = form, unit = !!enquo(unit), time = !!enquo(time),      t_int = t_int, data = data, progfun| __truncated__ ...
+  ..$ t_int              : num 91
+  ..- attr(*, "class")= chr "augsynth"
+ $ inference          :'data.frame':	1 obs. of  5 variables:
+  ..$ ATT           : num 156
+  ..$ Perc.Lift     : num 5.4
+  ..$ pvalue        : num 0.015
+  ..$ Lower.Conf.Int: logi NA
+  ..$ Upper.Conf.Int: logi NA
+ $ data               :'data.frame':	4200 obs. of  4 variables:
+  ..$ location: chr [1:4200] "atlanta" "atlanta" "atlanta" "atlanta" ...
+  ..$ time    : int [1:4200] 1 2 3 4 5 6 7 8 9 10 ...
+  ..$ Y       : int [1:4200] 3384 3904 5734 4311 3686 3374 3175 3594 4574 6866 ...
+  ..$ D       : num [1:4200] 0 0 0 0 0 0 0 0 0 0 ...
+ $ y_obs              : int [1:210] 2610 2927 2822 2901 3704 3674 2814 2710 2330 2857 ...
+ $ y_hat              : Named num [1:105] 2679 2987 3748 2766 2351 ...
+  ..- attr(*, "names")= chr [1:105] "1" "2" "3" "4" ...
+ $ ATT                : Named num [1:105] 89.86 -125.65 -58.94 -4.48 242.15 ...
+  ..- attr(*, "names")= chr [1:105] "1" "2" "3" "4" ...
+ $ ATT_se             : NULL
+ $ TreatmentStart     : num 91
+ $ TreatmentEnd       : num 105
+ $ test_id            :'data.frame':	2 obs. of  2 variables:
+  ..$ loc_id: int [1:2] 6 32
+  ..$ name  : chr [1:2] "chicago" "portland"
+ $ incremental        : num 4667
+ $ Y_id               : chr "Y"
+ $ summary            :List of 9
+  ..$ att                :'data.frame':	105 obs. of  5 variables:
+  ..$ average_att        :'data.frame':	1 obs. of  6 variables:
+  ..$ alpha              : num 0.1
+  ..$ t_int              : num 91
+  ..$ call               : language single_augsynth(form = form, unit = !!enquo(unit), time = !!enquo(time),      t_int = t_int, data = data, progfun| __truncated__ ...
+  ..$ l2_imbalance       : num 909
+  ..$ scaled_l2_imbalance: num 0.164
+  ..$ bias_est           : logi NA
+  ..$ inf_type           : chr "conformal"
+  ..- attr(*, "class")= chr "summary.augsynth"
+ $ ConfidenceIntervals: logi FALSE
+ $ lower_bound        : int NA
+ $ upper_bound        : int NA
+ $ df_weights         :'data.frame':	38 obs. of  2 variables:
+  ..$ location: chr [1:38] "atlanta" "austin" "baltimore" "baton rouge" ...
+  ..$ weight  : num [1:38] 1.26e-09 4.65e-02 6.96e-10 1.34e-01 2.57e-09 ...
+ $ stat_test          : chr "Total"
+ - attr(*, "class")= chr [1:2] "GeoLift" "list"

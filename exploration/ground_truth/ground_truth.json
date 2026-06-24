@@ -1,0 +1,39 @@
+{
+  "results_None": {
+    "incremental": 4666.6778,
+    "att_estimator": null,
+    "percent_lift": null,
+    "pvalue": null,
+    "lower_bound": null,
+    "upper_bound": null,
+    "l2_imbalance": null,
+    "scaled_l2_imbalance": null,
+    "treatment_start_time": 91,
+    "ci_widths": null
+  },
+  "results_best": {
+    "incremental": 4704.1622,
+    "att_estimator": null,
+    "percent_lift": null,
+    "pvalue": null,
+    "lower_bound": null,
+    "upper_bound": null,
+    "l2_imbalance": null,
+    "scaled_l2_imbalance": null,
+    "treatment_start_time": 91,
+    "ci_widths": null
+  },
+  "timings_seconds": {
+    "GeoDataRead_PreTest": 0.12,
+    "GeoDataRead_Test": 0.08,
+    "GeoLift_None": 18.11,
+    "GeoLift_best": 22.56,
+    "GeoLiftPower_small": 0.26
+  },
+  "doc_expected": {
+    "percent_lift": 5.4,
+    "incremental": 4667,
+    "att_per_day": 155.556,
+    "pvalue_approx": 0.01
+  }
+}

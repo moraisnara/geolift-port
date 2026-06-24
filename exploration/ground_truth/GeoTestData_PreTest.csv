@@ -1,0 +1,3601 @@
+"location","time","Y"
+"atlanta",1,3384
+"atlanta",2,3904
+"atlanta",3,5734
+"atlanta",4,4311
+"atlanta",5,3686
+"atlanta",6,3374
+"atlanta",7,3175
+"atlanta",8,3594
+"atlanta",9,4574
+"atlanta",10,6866
+"atlanta",11,4914
+"atlanta",12,3980
+"atlanta",13,3496
+"atlanta",14,3611
+"atlanta",15,3636
+"atlanta",16,4257
+"atlanta",17,6677
+"atlanta",18,4653
+"atlanta",19,3855
+"atlanta",20,3581
+"atlanta",21,3350
+"atlanta",22,3604
+"atlanta",23,4433
+"atlanta",24,7748
+"atlanta",25,5790
+"atlanta",26,4397
+"atlanta",27,4094
+"atlanta",28,3677
+"atlanta",29,4292
+"atlanta",30,4371
+"atlanta",31,7615
+"atlanta",32,5453
+"atlanta",33,3913
+"atlanta",34,3462
+"atlanta",35,3270
+"atlanta",36,3317
+"atlanta",37,4488
+"atlanta",38,7550
+"atlanta",39,5410
+"atlanta",40,4307
+"atlanta",41,3928
+"atlanta",42,3956
+"atlanta",43,3949
+"atlanta",44,4486
+"atlanta",45,7125
+"atlanta",46,5380
+"atlanta",47,3942
+"atlanta",48,3376
+"atlanta",49,3319
+"atlanta",50,3463
+"atlanta",51,4498
+"atlanta",52,7145
+"atlanta",53,5165
+"atlanta",54,4307
+"atlanta",55,3878
+"atlanta",56,4364
+"atlanta",57,3788
+"atlanta",58,4679
+"atlanta",59,7660
+"atlanta",60,5246
+"atlanta",61,3427
+"atlanta",62,3436
+"atlanta",63,3401
+"atlanta",64,3306
+"atlanta",65,4353
+"atlanta",66,7020
+"atlanta",67,4785
+"atlanta",68,3615
+"atlanta",69,3364
+"atlanta",70,4015
+"atlanta",71,3932
+"atlanta",72,4775
+"atlanta",73,7318
+"atlanta",74,5197
+"atlanta",75,3835
+"atlanta",76,3228
+"atlanta",77,3527
+"atlanta",78,3511
+"atlanta",79,4265
+"atlanta",80,7031
+"atlanta",81,5128
+"atlanta",82,3564
+"atlanta",83,3219
+"atlanta",84,3348
+"atlanta",85,4295
+"atlanta",86,4960
+"atlanta",87,7653
+"atlanta",88,5182
+"atlanta",89,4139
+"atlanta",90,3504
+"austin",1,2124
+"austin",2,2258
+"austin",3,2994
+"austin",4,2964
+"austin",5,2134
+"austin",6,2025
+"austin",7,1954
+"austin",8,2187
+"austin",9,2523
+"austin",10,3503
+"austin",11,3067
+"austin",12,2313
+"austin",13,2339
+"austin",14,2103
+"austin",15,2162
+"austin",16,2295
+"austin",17,3315
+"austin",18,2884
+"austin",19,2323
+"austin",20,2046
+"austin",21,2306
+"austin",22,2279
+"austin",23,2659
+"austin",24,3622
+"austin",25,3308
+"austin",26,2422
+"austin",27,2419
+"austin",28,2244
+"austin",29,2423
+"austin",30,2591
+"austin",31,3570
+"austin",32,3272
+"austin",33,2211
+"austin",34,2043
+"austin",35,2024
+"austin",36,2090
+"austin",37,2699
+"austin",38,3525
+"austin",39,3084
+"austin",40,2236
+"austin",41,2347
+"austin",42,2186
+"austin",43,2379
+"austin",44,2724
+"austin",45,3503
+"austin",46,2873
+"austin",47,2214
+"austin",48,2145
+"austin",49,2067
+"austin",50,2022
+"austin",51,2524
+"austin",52,3359
+"austin",53,3120
+"austin",54,2304
+"austin",55,2428
+"austin",56,2491
+"austin",57,2055
+"austin",58,2851
+"austin",59,3442
+"austin",60,3056
+"austin",61,2223
+"austin",62,2230
+"austin",63,2090
+"austin",64,2034
+"austin",65,2670
+"austin",66,3388
+"austin",67,3046
+"austin",68,2085
+"austin",69,2128
+"austin",70,2110
+"austin",71,2356
+"austin",72,2855
+"austin",73,3639
+"austin",74,3146
+"austin",75,2286
+"austin",76,2094
+"austin",77,2153
+"austin",78,2246
+"austin",79,2846
+"austin",80,3627
+"austin",81,3046
+"austin",82,2163
+"austin",83,2250
+"austin",84,2164
+"austin",85,2495
+"austin",86,2994
+"austin",87,3424
+"austin",88,3580
+"austin",89,2462
+"austin",90,2558
+"baltimore",1,3856
+"baltimore",2,3821
+"baltimore",3,5348
+"baltimore",4,3915
+"baltimore",5,2342
+"baltimore",6,3585
+"baltimore",7,3615
+"baltimore",8,4015
+"baltimore",9,4333
+"baltimore",10,5951
+"baltimore",11,4837
+"baltimore",12,4244
+"baltimore",13,3870
+"baltimore",14,3884
+"baltimore",15,3723
+"baltimore",16,3959
+"baltimore",17,5147
+"baltimore",18,4316
+"baltimore",19,3808
+"baltimore",20,3585
+"baltimore",21,3464
+"baltimore",22,3728
+"baltimore",23,4535
+"baltimore",24,5830
+"baltimore",25,4735
+"baltimore",26,3874
+"baltimore",27,3835
+"baltimore",28,3930
+"baltimore",29,3703
+"baltimore",30,4082
+"baltimore",31,5660
+"baltimore",32,4383
+"baltimore",33,3346
+"baltimore",34,3272
+"baltimore",35,3307
+"baltimore",36,3591
+"baltimore",37,2761
+"baltimore",38,5533
+"baltimore",39,4455
+"baltimore",40,3973
+"baltimore",41,4005
+"baltimore",42,3985
+"baltimore",43,3968
+"baltimore",44,4073
+"baltimore",45,5705
+"baltimore",46,3542
+"baltimore",47,4130
+"baltimore",48,3879
+"baltimore",49,3511
+"baltimore",50,3652
+"baltimore",51,3820
+"baltimore",52,5747
+"baltimore",53,4476
+"baltimore",54,3970
+"baltimore",55,4437
+"baltimore",56,4593
+"baltimore",57,3970
+"baltimore",58,4159
+"baltimore",59,5786
+"baltimore",60,4400
+"baltimore",61,3655
+"baltimore",62,3721
+"baltimore",63,3363
+"baltimore",64,3642
+"baltimore",65,4126
+"baltimore",66,5649
+"baltimore",67,4180
+"baltimore",68,3250
+"baltimore",69,3395
+"baltimore",70,4021
+"baltimore",71,4374
+"baltimore",72,4350
+"baltimore",73,5851
+"baltimore",74,4549
+"baltimore",75,3775
+"baltimore",76,3845
+"baltimore",77,3744
+"baltimore",78,3637
+"baltimore",79,4019
+"baltimore",80,5456
+"baltimore",81,4127
+"baltimore",82,3583
+"baltimore",83,3159
+"baltimore",84,3569
+"baltimore",85,4516
+"baltimore",86,4808
+"baltimore",87,6120
+"baltimore",88,4615
+"baltimore",89,3828
+"baltimore",90,3779
+"baton rouge",1,2617
+"baton rouge",2,2609
+"baton rouge",3,3132
+"baton rouge",4,2554
+"baton rouge",5,2279
+"baton rouge",6,2157
+"baton rouge",7,2421
+"baton rouge",8,2841
+"baton rouge",9,3016
+"baton rouge",10,3816
+"baton rouge",11,3010
+"baton rouge",12,2750
+"baton rouge",13,2810
+"baton rouge",14,2303
+"baton rouge",15,2420
+"baton rouge",16,2942
+"baton rouge",17,3462
+"baton rouge",18,2615
+"baton rouge",19,2551
+"baton rouge",20,2670
+"baton rouge",21,2517
+"baton rouge",22,2782
+"baton rouge",23,3306
+"baton rouge",24,4187
+"baton rouge",25,3439
+"baton rouge",26,3018
+"baton rouge",27,2661
+"baton rouge",28,2881
+"baton rouge",29,2836
+"baton rouge",30,2806
+"baton rouge",31,3645
+"baton rouge",32,2794
+"baton rouge",33,2210
+"baton rouge",34,2292
+"baton rouge",35,2068
+"baton rouge",36,2277
+"baton rouge",37,3000
+"baton rouge",38,3982
+"baton rouge",39,2837
+"baton rouge",40,2918
+"baton rouge",41,2932
+"baton rouge",42,2701
+"baton rouge",43,2785
+"baton rouge",44,2957
+"baton rouge",45,3770
+"baton rouge",46,2911
+"baton rouge",47,2605
+"baton rouge",48,2398
+"baton rouge",49,2263
+"baton rouge",50,2556
+"baton rouge",51,2959
+"baton rouge",52,3709
+"baton rouge",53,3030
+"baton rouge",54,2871
+"baton rouge",55,2797
+"baton rouge",56,3266
+"baton rouge",57,2689
+"baton rouge",58,3174
+"baton rouge",59,3592
+"baton rouge",60,2760
+"baton rouge",61,2688
+"baton rouge",62,2419
+"baton rouge",63,2237
+"baton rouge",64,2663
+"baton rouge",65,2677
+"baton rouge",66,3359
+"baton rouge",67,2606
+"baton rouge",68,2251
+"baton rouge",69,2342
+"baton rouge",70,2859
+"baton rouge",71,3214
+"baton rouge",72,3391
+"baton rouge",73,4322
+"baton rouge",74,3156
+"baton rouge",75,2586
+"baton rouge",76,2504
+"baton rouge",77,2496
+"baton rouge",78,2537
+"baton rouge",79,2707
+"baton rouge",80,3513
+"baton rouge",81,2516
+"baton rouge",82,2238
+"baton rouge",83,2279
+"baton rouge",84,2472
+"baton rouge",85,3272
+"baton rouge",86,3567
+"baton rouge",87,4095
+"baton rouge",88,3032
+"baton rouge",89,2836
+"baton rouge",90,2690
+"boston",1,3122
+"boston",2,3266
+"boston",3,4393
+"boston",4,5050
+"boston",5,2727
+"boston",6,2985
+"boston",7,2616
+"boston",8,3612
+"boston",9,3774
+"boston",10,4789
+"boston",11,5850
+"boston",12,3462
+"boston",13,3177
+"boston",14,3242
+"boston",15,3153
+"boston",16,3729
+"boston",17,5507
+"boston",18,5989
+"boston",19,3173
+"boston",20,3424
+"boston",21,3583
+"boston",22,3963
+"boston",23,4615
+"boston",24,6363
+"boston",25,7748
+"boston",26,3954
+"boston",27,3890
+"boston",28,3872
+"boston",29,4020
+"boston",30,3989
+"boston",31,6056
+"boston",32,6655
+"boston",33,3049
+"boston",34,3237
+"boston",35,3337
+"boston",36,3403
+"boston",37,4063
+"boston",38,5863
+"boston",39,6421
+"boston",40,3529
+"boston",41,4164
+"boston",42,3821
+"boston",43,3825
+"boston",44,4138
+"boston",45,5741
+"boston",46,6392
+"boston",47,3548
+"boston",48,3124
+"boston",49,3221
+"boston",50,3104
+"boston",51,3408
+"boston",52,5136
+"boston",53,6248
+"boston",54,3899
+"boston",55,4070
+"boston",56,4939
+"boston",57,3564
+"boston",58,3497
+"boston",59,5662
+"boston",60,6338
+"boston",61,3089
+"boston",62,3412
+"boston",63,3092
+"boston",64,2883
+"boston",65,3396
+"boston",66,4927
+"boston",67,6002
+"boston",68,3208
+"boston",69,3172
+"boston",70,3828
+"boston",71,3932
+"boston",72,4078
+"boston",73,6111
+"boston",74,6320
+"boston",75,3301
+"boston",76,3372
+"boston",77,3151
+"boston",78,3018
+"boston",79,3193
+"boston",80,5134
+"boston",81,6007
+"boston",82,2931
+"boston",83,2882
+"boston",84,3454
+"boston",85,4055
+"boston",86,4098
+"boston",87,5587
+"boston",88,6333
+"boston",89,3403
+"boston",90,3350
+"chicago",1,2610
+"chicago",2,2822
+"chicago",3,3704
+"chicago",4,2814
+"chicago",5,2330
+"chicago",6,2377
+"chicago",7,2615
+"chicago",8,2520
+"chicago",9,3098
+"chicago",10,4336
+"chicago",11,3238
+"chicago",12,2607
+"chicago",13,2542
+"chicago",14,2699
+"chicago",15,2705
+"chicago",16,2802
+"chicago",17,4168
+"chicago",18,2964
+"chicago",19,2741
+"chicago",20,2283
+"chicago",21,2386
+"chicago",22,2378
+"chicago",23,3188
+"chicago",24,4786
+"chicago",25,3497
+"chicago",26,2983
+"chicago",27,2637
+"chicago",28,2194
+"chicago",29,3069
+"chicago",30,3174
+"chicago",31,4448
+"chicago",32,3245
+"chicago",33,2381
+"chicago",34,2262
+"chicago",35,2183
+"chicago",36,2281
+"chicago",37,2721
+"chicago",38,4175
+"chicago",39,3266
+"chicago",40,2892
+"chicago",41,2802
+"chicago",42,2583
+"chicago",43,2449
+"chicago",44,2896
+"chicago",45,4028
+"chicago",46,3114
+"chicago",47,2472
+"chicago",48,2079
+"chicago",49,2025
+"chicago",50,2281
+"chicago",51,2525
+"chicago",52,4236
+"chicago",53,3067
+"chicago",54,2729
+"chicago",55,2631
+"chicago",56,3186
+"chicago",57,2411
+"chicago",58,3102
+"chicago",59,4613
+"chicago",60,3274
+"chicago",61,2701
+"chicago",62,2319
+"chicago",63,2246
+"chicago",64,2188
+"chicago",65,2481
+"chicago",66,3875
+"chicago",67,2677
+"chicago",68,2230
+"chicago",69,2146
+"chicago",70,2474
+"chicago",71,2825
+"chicago",72,3173
+"chicago",73,4375
+"chicago",74,3378
+"chicago",75,2696
+"chicago",76,2308
+"chicago",77,2351
+"chicago",78,2385
+"chicago",79,2774
+"chicago",80,3914
+"chicago",81,2944
+"chicago",82,2394
+"chicago",83,2168
+"chicago",84,2320
+"chicago",85,2738
+"chicago",86,3216
+"chicago",87,4253
+"chicago",88,3187
+"chicago",89,2566
+"chicago",90,2393
+"cincinnati",1,2703
+"cincinnati",2,2997
+"cincinnati",3,3631
+"cincinnati",4,2965
+"cincinnati",5,2535
+"cincinnati",6,2570
+"cincinnati",7,2773
+"cincinnati",8,2841
+"cincinnati",9,3291
+"cincinnati",10,3962
+"cincinnati",11,3077
+"cincinnati",12,2970
+"cincinnati",13,3034
+"cincinnati",14,2916
+"cincinnati",15,2764
+"cincinnati",16,3097
+"cincinnati",17,3597
+"cincinnati",18,3095
+"cincinnati",19,3054
+"cincinnati",20,2821
+"cincinnati",21,2627
+"cincinnati",22,2877
+"cincinnati",23,3654
+"cincinnati",24,4510
+"cincinnati",25,3666
+"cincinnati",26,3114
+"cincinnati",27,2997
+"cincinnati",28,2839
+"cincinnati",29,3558
+"cincinnati",30,3158
+"cincinnati",31,4241
+"cincinnati",32,3241
+"cincinnati",33,2914
+"cincinnati",34,2698
+"cincinnati",35,2519
+"cincinnati",36,2480
+"cincinnati",37,3074
+"cincinnati",38,3888
+"cincinnati",39,3415
+"cincinnati",40,3084
+"cincinnati",41,3140
+"cincinnati",42,3167
+"cincinnati",43,3122
+"cincinnati",44,3460
+"cincinnati",45,4129
+"cincinnati",46,2990
+"cincinnati",47,2962
+"cincinnati",48,2835
+"cincinnati",49,2540
+"cincinnati",50,2623
+"cincinnati",51,3188
+"cincinnati",52,3853
+"cincinnati",53,3097
+"cincinnati",54,2918
+"cincinnati",55,3309
+"cincinnati",56,2796
+"cincinnati",57,3178
+"cincinnati",58,3358
+"cincinnati",59,4455
+"cincinnati",60,3319
+"cincinnati",61,2850
+"cincinnati",62,2855
+"cincinnati",63,2531
+"cincinnati",64,2497
+"cincinnati",65,3176
+"cincinnati",66,3820
+"cincinnati",67,3014
+"cincinnati",68,2671
+"cincinnati",69,2566
+"cincinnati",70,3012
+"cincinnati",71,2896
+"cincinnati",72,3440
+"cincinnati",73,4465
+"cincinnati",74,3359
+"cincinnati",75,2741
+"cincinnati",76,2639
+"cincinnati",77,2720
+"cincinnati",78,2718
+"cincinnati",79,3329
+"cincinnati",80,4014
+"cincinnati",81,3076
+"cincinnati",82,2628
+"cincinnati",83,2662
+"cincinnati",84,2724
+"cincinnati",85,3167
+"cincinnati",86,3555
+"cincinnati",87,4395
+"cincinnati",88,3345
+"cincinnati",89,2896
+"cincinnati",90,3070
+"cleveland",1,2584
+"cleveland",2,3521
+"cleveland",3,5113
+"cleveland",4,2400
+"cleveland",5,2472
+"cleveland",6,2414
+"cleveland",7,2239
+"cleveland",8,2832
+"cleveland",9,3852
+"cleveland",10,5879
+"cleveland",11,5065
+"cleveland",12,3084
+"cleveland",13,2762
+"cleveland",14,2537
+"cleveland",15,2845
+"cleveland",16,3604
+"cleveland",17,5631
+"cleveland",18,4612
+"cleveland",19,2784
+"cleveland",20,2383
+"cleveland",21,2313
+"cleveland",22,2384
+"cleveland",23,3676
+"cleveland",24,5855
+"cleveland",25,5015
+"cleveland",26,2956
+"cleveland",27,2722
+"cleveland",28,2605
+"cleveland",29,2812
+"cleveland",30,3410
+"cleveland",31,5421
+"cleveland",32,4516
+"cleveland",33,2493
+"cleveland",34,2092
+"cleveland",35,2227
+"cleveland",36,2267
+"cleveland",37,3426
+"cleveland",38,5657
+"cleveland",39,4599
+"cleveland",40,2904
+"cleveland",41,2644
+"cleveland",42,2727
+"cleveland",43,2435
+"cleveland",44,3686
+"cleveland",45,5914
+"cleveland",46,5124
+"cleveland",47,2807
+"cleveland",48,2464
+"cleveland",49,2277
+"cleveland",50,2405
+"cleveland",51,3446
+"cleveland",52,5480
+"cleveland",53,4715
+"cleveland",54,2852
+"cleveland",55,2974
+"cleveland",56,3884
+"cleveland",57,2748
+"cleveland",58,3743
+"cleveland",59,6390
+"cleveland",60,5010
+"cleveland",61,2668
+"cleveland",62,2367
+"cleveland",63,2482
+"cleveland",64,2496
+"cleveland",65,3446
+"cleveland",66,5651
+"cleveland",67,4490
+"cleveland",68,2453
+"cleveland",69,2384
+"cleveland",70,2701
+"cleveland",71,2985
+"cleveland",72,3817
+"cleveland",73,6175
+"cleveland",74,4829
+"cleveland",75,2665
+"cleveland",76,2459
+"cleveland",77,2238
+"cleveland",78,2566
+"cleveland",79,3317
+"cleveland",80,5681
+"cleveland",81,4362
+"cleveland",82,2498
+"cleveland",83,2041
+"cleveland",84,2376
+"cleveland",85,2958
+"cleveland",86,3863
+"cleveland",87,5835
+"cleveland",88,4232
+"cleveland",89,2491
+"cleveland",90,2482
+"columbus",1,3793
+"columbus",2,3906
+"columbus",3,5311
+"columbus",4,4527
+"columbus",5,3549
+"columbus",6,3613
+"columbus",7,3213
+"columbus",8,4294
+"columbus",9,4846
+"columbus",10,6584
+"columbus",11,5534
+"columbus",12,4216
+"columbus",13,4246
+"columbus",14,4198
+"columbus",15,4050
+"columbus",16,4275
+"columbus",17,5870
+"columbus",18,5321
+"columbus",19,3750
+"columbus",20,3816
+"columbus",21,3882
+"columbus",22,3837
+"columbus",23,5063
+"columbus",24,7004
+"columbus",25,6539
+"columbus",26,4318
+"columbus",27,4240
+"columbus",28,4138
+"columbus",29,4164
+"columbus",30,4566
+"columbus",31,6123
+"columbus",32,5573
+"columbus",33,3287
+"columbus",34,2878
+"columbus",35,3404
+"columbus",36,3553
+"columbus",37,4213
+"columbus",38,6383
+"columbus",39,5986
+"columbus",40,3956
+"columbus",41,4340
+"columbus",42,4194
+"columbus",43,3987
+"columbus",44,3953
+"columbus",45,5878
+"columbus",46,5125
+"columbus",47,3537
+"columbus",48,3452
+"columbus",49,3164
+"columbus",50,3406
+"columbus",51,3877
+"columbus",52,5670
+"columbus",53,4774
+"columbus",54,3710
+"columbus",55,4168
+"columbus",56,4768
+"columbus",57,3686
+"columbus",58,4361
+"columbus",59,5692
+"columbus",60,4891
+"columbus",61,3381
+"columbus",62,3192
+"columbus",63,3069
+"columbus",64,3054
+"columbus",65,3816
+"columbus",66,5166
+"columbus",67,4336
+"columbus",68,3009
+"columbus",69,2768
+"columbus",70,3933
+"columbus",71,4327
+"columbus",72,4484
+"columbus",73,6166
+"columbus",74,5072
+"columbus",75,3507
+"columbus",76,3149
+"columbus",77,3226
+"columbus",78,3293
+"columbus",79,3683
+"columbus",80,5381
+"columbus",81,4616
+"columbus",82,3296
+"columbus",83,3137
+"columbus",84,3259
+"columbus",85,4430
+"columbus",86,4599
+"columbus",87,6693
+"columbus",88,5225
+"columbus",89,3756
+"columbus",90,3807
+"dallas",1,1683
+"dallas",2,2016
+"dallas",3,2980
+"dallas",4,635
+"dallas",5,937
+"dallas",6,1971
+"dallas",7,1787
+"dallas",8,2006
+"dallas",9,2432
+"dallas",10,4070
+"dallas",11,3244
+"dallas",12,2159
+"dallas",13,1919
+"dallas",14,1863
+"dallas",15,1964
+"dallas",16,2194
+"dallas",17,3686
+"dallas",18,2899
+"dallas",19,1945
+"dallas",20,1812
+"dallas",21,1685
+"dallas",22,1944
+"dallas",23,2475
+"dallas",24,4006
+"dallas",25,3080
+"dallas",26,2166
+"dallas",27,1872
+"dallas",28,1889
+"dallas",29,1924
+"dallas",30,2218
+"dallas",31,3617
+"dallas",32,2953
+"dallas",33,1810
+"dallas",34,1672
+"dallas",35,1621
+"dallas",36,1698
+"dallas",37,2056
+"dallas",38,3608
+"dallas",39,3124
+"dallas",40,2032
+"dallas",41,2167
+"dallas",42,2070
+"dallas",43,1840
+"dallas",44,2288
+"dallas",45,3367
+"dallas",46,3233
+"dallas",47,2187
+"dallas",48,1941
+"dallas",49,1669
+"dallas",50,1841
+"dallas",51,2205
+"dallas",52,3826
+"dallas",53,2982
+"dallas",54,2020
+"dallas",55,2132
+"dallas",56,3184
+"dallas",57,1895
+"dallas",58,2267
+"dallas",59,3713
+"dallas",60,3195
+"dallas",61,1914
+"dallas",62,1751
+"dallas",63,1740
+"dallas",64,1680
+"dallas",65,1972
+"dallas",66,3542
+"dallas",67,2700
+"dallas",68,1658
+"dallas",69,1731
+"dallas",70,2041
+"dallas",71,2243
+"dallas",72,2589
+"dallas",73,3886
+"dallas",74,3235
+"dallas",75,1998
+"dallas",76,1844
+"dallas",77,1763
+"dallas",78,1813
+"dallas",79,2133
+"dallas",80,3539
+"dallas",81,2720
+"dallas",82,1676
+"dallas",83,1562
+"dallas",84,1760
+"dallas",85,2166
+"dallas",86,2578
+"dallas",87,3653
+"dallas",88,3213
+"dallas",89,1805
+"dallas",90,1753
+"denver",1,2510
+"denver",2,2960
+"denver",3,4705
+"denver",4,1717
+"denver",5,1802
+"denver",6,2719
+"denver",7,2628
+"denver",8,2894
+"denver",9,3730
+"denver",10,5900
+"denver",11,4372
+"denver",12,3246
+"denver",13,2913
+"denver",14,2651
+"denver",15,2803
+"denver",16,3182
+"denver",17,5335
+"denver",18,4085
+"denver",19,3026
+"denver",20,2515
+"denver",21,2664
+"denver",22,2810
+"denver",23,3684
+"denver",24,5986
+"denver",25,4561
+"denver",26,3340
+"denver",27,2861
+"denver",28,2982
+"denver",29,2955
+"denver",30,3366
+"denver",31,5389
+"denver",32,4406
+"denver",33,2836
+"denver",34,2640
+"denver",35,2405
+"denver",36,2517
+"denver",37,3480
+"denver",38,5140
+"denver",39,4217
+"denver",40,3152
+"denver",41,3013
+"denver",42,2978
+"denver",43,2846
+"denver",44,3469
+"denver",45,5056
+"denver",46,4925
+"denver",47,3152
+"denver",48,2888
+"denver",49,2552
+"denver",50,2794
+"denver",51,3693
+"denver",52,5752
+"denver",53,4281
+"denver",54,3167
+"denver",55,3210
+"denver",56,4430
+"denver",57,3011
+"denver",58,3602
+"denver",59,5453
+"denver",60,4406
+"denver",61,3155
+"denver",62,2679
+"denver",63,2462
+"denver",64,2720
+"denver",65,3226
+"denver",66,4802
+"denver",67,3888
+"denver",68,2577
+"denver",69,2635
+"denver",70,3072
+"denver",71,3441
+"denver",72,3798
+"denver",73,6007
+"denver",74,4610
+"denver",75,3142
+"denver",76,2676
+"denver",77,2531
+"denver",78,2687
+"denver",79,3189
+"denver",80,5343
+"denver",81,3933
+"denver",82,2628
+"denver",83,2434
+"denver",84,2612
+"denver",85,3198
+"denver",86,3953
+"denver",87,5690
+"denver",88,4455
+"denver",89,2839
+"denver",90,2693
+"detroit",1,2736
+"detroit",2,2439
+"detroit",3,3039
+"detroit",4,3037
+"detroit",5,2134
+"detroit",6,2345
+"detroit",7,2139
+"detroit",8,2402
+"detroit",9,2443
+"detroit",10,3592
+"detroit",11,3656
+"detroit",12,2253
+"detroit",13,2177
+"detroit",14,2144
+"detroit",15,2294
+"detroit",16,2348
+"detroit",17,3231
+"detroit",18,3299
+"detroit",19,1858
+"detroit",20,2180
+"detroit",21,2038
+"detroit",22,2300
+"detroit",23,2368
+"detroit",24,3885
+"detroit",25,4111
+"detroit",26,2390
+"detroit",27,2878
+"detroit",28,2255
+"detroit",29,2524
+"detroit",30,2844
+"detroit",31,3329
+"detroit",32,3501
+"detroit",33,1810
+"detroit",34,2019
+"detroit",35,2107
+"detroit",36,1937
+"detroit",37,3112
+"detroit",38,3751
+"detroit",39,3547
+"detroit",40,2335
+"detroit",41,2493
+"detroit",42,2247
+"detroit",43,2715
+"detroit",44,2467
+"detroit",45,3530
+"detroit",46,3586
+"detroit",47,2215
+"detroit",48,2082
+"detroit",49,1907
+"detroit",50,2046
+"detroit",51,2207
+"detroit",52,2901
+"detroit",53,3205
+"detroit",54,2221
+"detroit",55,2381
+"detroit",56,2661
+"detroit",57,2156
+"detroit",58,2075
+"detroit",59,3356
+"detroit",60,3668
+"detroit",61,1812
+"detroit",62,2118
+"detroit",63,1805
+"detroit",64,1970
+"detroit",65,2039
+"detroit",66,3150
+"detroit",67,3178
+"detroit",68,2082
+"detroit",69,1830
+"detroit",70,2290
+"detroit",71,2521
+"detroit",72,2680
+"detroit",73,3295
+"detroit",74,3599
+"detroit",75,1988
+"detroit",76,1891
+"detroit",77,2128
+"detroit",78,2062
+"detroit",79,2004
+"detroit",80,3258
+"detroit",81,3587
+"detroit",82,2196
+"detroit",83,1926
+"detroit",84,2047
+"detroit",85,2383
+"detroit",86,2771
+"detroit",87,3368
+"detroit",88,3621
+"detroit",89,2164
+"detroit",90,2206
+"honolulu",1,2057
+"honolulu",2,2528
+"honolulu",3,2575
+"honolulu",4,2061
+"honolulu",5,2264
+"honolulu",6,1974
+"honolulu",7,1950
+"honolulu",8,2274
+"honolulu",9,2562
+"honolulu",10,3177
+"honolulu",11,2260
+"honolulu",12,2465
+"honolulu",13,2456
+"honolulu",14,2065
+"honolulu",15,2197
+"honolulu",16,2527
+"honolulu",17,2789
+"honolulu",18,2076
+"honolulu",19,2196
+"honolulu",20,2017
+"honolulu",21,1975
+"honolulu",22,2148
+"honolulu",23,2869
+"honolulu",24,3146
+"honolulu",25,2631
+"honolulu",26,2600
+"honolulu",27,2367
+"honolulu",28,2351
+"honolulu",29,2462
+"honolulu",30,2684
+"honolulu",31,3057
+"honolulu",32,2475
+"honolulu",33,2306
+"honolulu",34,2136
+"honolulu",35,2113
+"honolulu",36,2106
+"honolulu",37,2661
+"honolulu",38,3346
+"honolulu",39,2834
+"honolulu",40,2321
+"honolulu",41,2230
+"honolulu",42,2212
+"honolulu",43,2255
+"honolulu",44,2678
+"honolulu",45,3402
+"honolulu",46,3014
+"honolulu",47,2064
+"honolulu",48,1898
+"honolulu",49,1859
+"honolulu",50,1852
+"honolulu",51,2379
+"honolulu",52,3374
+"honolulu",53,2724
+"honolulu",54,2194
+"honolulu",55,2419
+"honolulu",56,3245
+"honolulu",57,2225
+"honolulu",58,2574
+"honolulu",59,3893
+"honolulu",60,3443
+"honolulu",61,2171
+"honolulu",62,2006
+"honolulu",63,2057
+"honolulu",64,2249
+"honolulu",65,2520
+"honolulu",66,3650
+"honolulu",67,3158
+"honolulu",68,2011
+"honolulu",69,2086
+"honolulu",70,2418
+"honolulu",71,2550
+"honolulu",72,2934
+"honolulu",73,4061
+"honolulu",74,3395
+"honolulu",75,2357
+"honolulu",76,1999
+"honolulu",77,1972
+"honolulu",78,2125
+"honolulu",79,2230
+"honolulu",80,3704
+"honolulu",81,3119
+"honolulu",82,2218
+"honolulu",83,1937
+"honolulu",84,1870
+"honolulu",85,2290
+"honolulu",86,3013
+"honolulu",87,3979
+"honolulu",88,3295
+"honolulu",89,2173
+"honolulu",90,2148
+"houston",1,3970
+"houston",2,4378
+"houston",3,5990
+"houston",4,3831
+"houston",5,3434
+"houston",6,3552
+"houston",7,3469
+"houston",8,3928
+"houston",9,4682
+"houston",10,6925
+"houston",11,4738
+"houston",12,4034
+"houston",13,3786
+"houston",14,3545
+"houston",15,3868
+"houston",16,4474
+"houston",17,6076
+"houston",18,4206
+"houston",19,3641
+"houston",20,4150
+"houston",21,3650
+"houston",22,3675
+"houston",23,4917
+"houston",24,6755
+"houston",25,4539
+"houston",26,4129
+"houston",27,3816
+"houston",28,3751
+"houston",29,4224
+"houston",30,4392
+"houston",31,6210
+"houston",32,4007
+"houston",33,4275
+"houston",34,2953
+"houston",35,2945
+"houston",36,3906
+"houston",37,4127
+"houston",38,6121
+"houston",39,4028
+"houston",40,3641
+"houston",41,3707
+"houston",42,3694
+"houston",43,4060
+"houston",44,4888
+"houston",45,6530
+"houston",46,4059
+"houston",47,3603
+"houston",48,3278
+"houston",49,3245
+"houston",50,3692
+"houston",51,4544
+"houston",52,6691
+"houston",53,4687
+"houston",54,4196
+"houston",55,4313
+"houston",56,4778
+"houston",57,4425
+"houston",58,5326
+"houston",59,7588
+"houston",60,4595
+"houston",61,3681
+"houston",62,3302
+"houston",63,3499
+"houston",64,3597
+"houston",65,4260
+"houston",66,6658
+"houston",67,3907
+"houston",68,3377
+"houston",69,3554
+"houston",70,4042
+"houston",71,4436
+"houston",72,5259
+"houston",73,7452
+"houston",74,4604
+"houston",75,4554
+"houston",76,3503
+"houston",77,3548
+"houston",78,3905
+"houston",79,4576
+"houston",80,6770
+"houston",81,4271
+"houston",82,3467
+"houston",83,3067
+"houston",84,3501
+"houston",85,4201
+"houston",86,5048
+"houston",87,7323
+"houston",88,4547
+"houston",89,3377
+"houston",90,3522
+"indianapolis",1,2287
+"indianapolis",2,3003
+"indianapolis",3,3293
+"indianapolis",4,2039
+"indianapolis",5,2742
+"indianapolis",6,2509
+"indianapolis",7,2346
+"indianapolis",8,2907
+"indianapolis",9,3373
+"indianapolis",10,4187
+"indianapolis",11,3926
+"indianapolis",12,2639
+"indianapolis",13,2561
+"indianapolis",14,2574
+"indianapolis",15,2616
+"indianapolis",16,3296
+"indianapolis",17,4507
+"indianapolis",18,3708
+"indianapolis",19,2601
+"indianapolis",20,2572
+"indianapolis",21,2467
+"indianapolis",22,2783
+"indianapolis",23,3423
+"indianapolis",24,4912
+"indianapolis",25,4404
+"indianapolis",26,2979
+"indianapolis",27,2845
+"indianapolis",28,2617
+"indianapolis",29,2787
+"indianapolis",30,3287
+"indianapolis",31,4523
+"indianapolis",32,4642
+"indianapolis",33,2715
+"indianapolis",34,2374
+"indianapolis",35,2250
+"indianapolis",36,2774
+"indianapolis",37,3682
+"indianapolis",38,5167
+"indianapolis",39,4301
+"indianapolis",40,2873
+"indianapolis",41,2576
+"indianapolis",42,2628
+"indianapolis",43,2915
+"indianapolis",44,3482
+"indianapolis",45,4653
+"indianapolis",46,4664
+"indianapolis",47,3011
+"indianapolis",48,2486
+"indianapolis",49,2015
+"indianapolis",50,2603
+"indianapolis",51,3618
+"indianapolis",52,4812
+"indianapolis",53,4220
+"indianapolis",54,2773
+"indianapolis",55,2854
+"indianapolis",56,3343
+"indianapolis",57,2878
+"indianapolis",58,3660
+"indianapolis",59,5548
+"indianapolis",60,4391
+"indianapolis",61,2827
+"indianapolis",62,2544
+"indianapolis",63,2552
+"indianapolis",64,2815
+"indianapolis",65,2847
+"indianapolis",66,5426
+"indianapolis",67,4330
+"indianapolis",68,2512
+"indianapolis",69,2715
+"indianapolis",70,2915
+"indianapolis",71,3251
+"indianapolis",72,3651
+"indianapolis",73,5345
+"indianapolis",74,4608
+"indianapolis",75,2862
+"indianapolis",76,2563
+"indianapolis",77,2586
+"indianapolis",78,2819
+"indianapolis",79,3306
+"indianapolis",80,5169
+"indianapolis",81,4077
+"indianapolis",82,2540
+"indianapolis",83,2339
+"indianapolis",84,2601
+"indianapolis",85,3131
+"indianapolis",86,3837
+"indianapolis",87,5603
+"indianapolis",88,4501
+"indianapolis",89,3057
+"indianapolis",90,2593
+"jacksonville",1,2024
+"jacksonville",2,2443
+"jacksonville",3,2947
+"jacksonville",4,3023
+"jacksonville",5,1939
+"jacksonville",6,1919
+"jacksonville",7,2005
+"jacksonville",8,2297
+"jacksonville",9,2393
+"jacksonville",10,3503
+"jacksonville",11,3964
+"jacksonville",12,2126
+"jacksonville",13,2364
+"jacksonville",14,1976
+"jacksonville",15,2134
+"jacksonville",16,2118
+"jacksonville",17,3193
+"jacksonville",18,3640
+"jacksonville",19,2048
+"jacksonville",20,1935
+"jacksonville",21,1938
+"jacksonville",22,2292
+"jacksonville",23,2895
+"jacksonville",24,4150
+"jacksonville",25,4534
+"jacksonville",26,2294
+"jacksonville",27,2368
+"jacksonville",28,2321
+"jacksonville",29,2383
+"jacksonville",30,2597
+"jacksonville",31,3635
+"jacksonville",32,3701
+"jacksonville",33,1809
+"jacksonville",34,1960
+"jacksonville",35,1786
+"jacksonville",36,1525
+"jacksonville",37,2510
+"jacksonville",38,3837
+"jacksonville",39,3648
+"jacksonville",40,2346
+"jacksonville",41,2386
+"jacksonville",42,2241
+"jacksonville",43,2223
+"jacksonville",44,2440
+"jacksonville",45,3571
+"jacksonville",46,3786
+"jacksonville",47,2029
+"jacksonville",48,1882
+"jacksonville",49,1809
+"jacksonville",50,1728
+"jacksonville",51,2132
+"jacksonville",52,3314
+"jacksonville",53,3644
+"jacksonville",54,2281
+"jacksonville",55,2320
+"jacksonville",56,2789
+"jacksonville",57,2388
+"jacksonville",58,2317
+"jacksonville",59,3871
+"jacksonville",60,4096
+"jacksonville",61,1990
+"jacksonville",62,2118
+"jacksonville",63,1916
+"jacksonville",64,1758
+"jacksonville",65,2065
+"jacksonville",66,3490
+"jacksonville",67,3506
+"jacksonville",68,1956
+"jacksonville",69,1908
+"jacksonville",70,2360
+"jacksonville",71,2545
+"jacksonville",72,2720
+"jacksonville",73,3918
+"jacksonville",74,3680
+"jacksonville",75,2045
+"jacksonville",76,1910
+"jacksonville",77,1924
+"jacksonville",78,1849
+"jacksonville",79,2038
+"jacksonville",80,3492
+"jacksonville",81,3600
+"jacksonville",82,1787
+"jacksonville",83,1882
+"jacksonville",84,2214
+"jacksonville",85,2652
+"jacksonville",86,2779
+"jacksonville",87,4065
+"jacksonville",88,3841
+"jacksonville",89,2042
+"jacksonville",90,2205
+"kansas city",1,3539
+"kansas city",2,4186
+"kansas city",3,6014
+"kansas city",4,5625
+"kansas city",5,3212
+"kansas city",6,3172
+"kansas city",7,3336
+"kansas city",8,3821
+"kansas city",9,4306
+"kansas city",10,5774
+"kansas city",11,5384
+"kansas city",12,3796
+"kansas city",13,3221
+"kansas city",14,3448
+"kansas city",15,3450
+"kansas city",16,4140
+"kansas city",17,6005
+"kansas city",18,5923
+"kansas city",19,3688
+"kansas city",20,3282
+"kansas city",21,3130
+"kansas city",22,3283
+"kansas city",23,4445
+"kansas city",24,6775
+"kansas city",25,6485
+"kansas city",26,4248
+"kansas city",27,3664
+"kansas city",28,3457
+"kansas city",29,3938
+"kansas city",30,4467
+"kansas city",31,6471
+"kansas city",32,5989
+"kansas city",33,3438
+"kansas city",34,2864
+"kansas city",35,3039
+"kansas city",36,3053
+"kansas city",37,4068
+"kansas city",38,6749
+"kansas city",39,6295
+"kansas city",40,3678
+"kansas city",41,3761
+"kansas city",42,3635
+"kansas city",43,3665
+"kansas city",44,4271
+"kansas city",45,6429
+"kansas city",46,6539
+"kansas city",47,3876
+"kansas city",48,3217
+"kansas city",49,3294
+"kansas city",50,3386
+"kansas city",51,3994
+"kansas city",52,6461
+"kansas city",53,5788
+"kansas city",54,3769
+"kansas city",55,3131
+"kansas city",56,4957
+"kansas city",57,3797
+"kansas city",58,4289
+"kansas city",59,6535
+"kansas city",60,6087
+"kansas city",61,3551
+"kansas city",62,3090
+"kansas city",63,3312
+"kansas city",64,3086
+"kansas city",65,4026
+"kansas city",66,5982
+"kansas city",67,5598
+"kansas city",68,3388
+"kansas city",69,3355
+"kansas city",70,3792
+"kansas city",71,4054
+"kansas city",72,4485
+"kansas city",73,7155
+"kansas city",74,6634
+"kansas city",75,3835
+"kansas city",76,3447
+"kansas city",77,3545
+"kansas city",78,3347
+"kansas city",79,4358
+"kansas city",80,6515
+"kansas city",81,5928
+"kansas city",82,3172
+"kansas city",83,3235
+"kansas city",84,3260
+"kansas city",85,3988
+"kansas city",86,4672
+"kansas city",87,7301
+"kansas city",88,6651
+"kansas city",89,3809
+"kansas city",90,3664
+"las vegas",1,3558
+"las vegas",2,5015
+"las vegas",3,6615
+"las vegas",4,5298
+"las vegas",5,4133
+"las vegas",6,3677
+"las vegas",7,3924
+"las vegas",8,3884
+"las vegas",9,5237
+"las vegas",10,7439
+"las vegas",11,5795
+"las vegas",12,4315
+"las vegas",13,3739
+"las vegas",14,3795
+"las vegas",15,3578
+"las vegas",16,4337
+"las vegas",17,6772
+"las vegas",18,5255
+"las vegas",19,3986
+"las vegas",20,3442
+"las vegas",21,4015
+"las vegas",22,3626
+"las vegas",23,5179
+"las vegas",24,8176
+"las vegas",25,6680
+"las vegas",26,4540
+"las vegas",27,3942
+"las vegas",28,4327
+"las vegas",29,4568
+"las vegas",30,4731
+"las vegas",31,7961
+"las vegas",32,5898
+"las vegas",33,4017
+"las vegas",34,3609
+"las vegas",35,4033
+"las vegas",36,3555
+"las vegas",37,4695
+"las vegas",38,7298
+"las vegas",39,6251
+"las vegas",40,4565
+"las vegas",41,4206
+"las vegas",42,4535
+"las vegas",43,4140
+"las vegas",44,5084
+"las vegas",45,7274
+"las vegas",46,5923
+"las vegas",47,4139
+"las vegas",48,3478
+"las vegas",49,3899
+"las vegas",50,3505
+"las vegas",51,4729
+"las vegas",52,6634
+"las vegas",53,5194
+"las vegas",54,4429
+"las vegas",55,4258
+"las vegas",56,5665
+"las vegas",57,4035
+"las vegas",58,4470
+"las vegas",59,7140
+"las vegas",60,5750
+"las vegas",61,3770
+"las vegas",62,3784
+"las vegas",63,4266
+"las vegas",64,3662
+"las vegas",65,4381
+"las vegas",66,6901
+"las vegas",67,5158
+"las vegas",68,3727
+"las vegas",69,3490
+"las vegas",70,4584
+"las vegas",71,4495
+"las vegas",72,5276
+"las vegas",73,7384
+"las vegas",74,5886
+"las vegas",75,3949
+"las vegas",76,4000
+"las vegas",77,4206
+"las vegas",78,3795
+"las vegas",79,4704
+"las vegas",80,6933
+"las vegas",81,4992
+"las vegas",82,3954
+"las vegas",83,4155
+"las vegas",84,4414
+"las vegas",85,4420
+"las vegas",86,5768
+"las vegas",87,7561
+"las vegas",88,5995
+"las vegas",89,4222
+"las vegas",90,4115
+"los angeles",1,2491
+"los angeles",2,2535
+"los angeles",3,3410
+"los angeles",4,3118
+"los angeles",5,2707
+"los angeles",6,2554
+"los angeles",7,2276
+"los angeles",8,2834
+"los angeles",9,3186
+"los angeles",10,4514
+"los angeles",11,4353
+"los angeles",12,2874
+"los angeles",13,2971
+"los angeles",14,2704
+"los angeles",15,2304
+"los angeles",16,2877
+"los angeles",17,3945
+"los angeles",18,4096
+"los angeles",19,2761
+"los angeles",20,2671
+"los angeles",21,2467
+"los angeles",22,2633
+"los angeles",23,3280
+"los angeles",24,5062
+"los angeles",25,5128
+"los angeles",26,3515
+"los angeles",27,3327
+"los angeles",28,3094
+"los angeles",29,3146
+"los angeles",30,2963
+"los angeles",31,4369
+"los angeles",32,4792
+"los angeles",33,2693
+"los angeles",34,2459
+"los angeles",35,2577
+"los angeles",36,2716
+"los angeles",37,3237
+"los angeles",38,4535
+"los angeles",39,5038
+"los angeles",40,3637
+"los angeles",41,3421
+"los angeles",42,3077
+"los angeles",43,3282
+"los angeles",44,3088
+"los angeles",45,4393
+"los angeles",46,4745
+"los angeles",47,2889
+"los angeles",48,2536
+"los angeles",49,2602
+"los angeles",50,2360
+"los angeles",51,2780
+"los angeles",52,4284
+"los angeles",53,4327
+"los angeles",54,3070
+"los angeles",55,3510
+"los angeles",56,4230
+"los angeles",57,3156
+"los angeles",58,3286
+"los angeles",59,4586
+"los angeles",60,4796
+"los angeles",61,3037
+"los angeles",62,2626
+"los angeles",63,2630
+"los angeles",64,2589
+"los angeles",65,2773
+"los angeles",66,3980
+"los angeles",67,3963
+"los angeles",68,2601
+"los angeles",69,2614
+"los angeles",70,2996
+"los angeles",71,3394
+"los angeles",72,3044
+"los angeles",73,2485
+"los angeles",74,5400
+"los angeles",75,2637
+"los angeles",76,184
+"los angeles",77,6
+"los angeles",78,2127
+"los angeles",79,2897
+"los angeles",80,4024
+"los angeles",81,4518
+"los angeles",82,2805
+"los angeles",83,2783
+"los angeles",84,3018
+"los angeles",85,3804
+"los angeles",86,4154
+"los angeles",87,5755
+"los angeles",88,5907
+"los angeles",89,3377
+"los angeles",90,3288
+"memphis",1,3013
+"memphis",2,3662
+"memphis",3,5532
+"memphis",4,1021
+"memphis",5,881
+"memphis",6,3501
+"memphis",7,3512
+"memphis",8,3821
+"memphis",9,4764
+"memphis",10,8148
+"memphis",11,6152
+"memphis",12,3832
+"memphis",13,3613
+"memphis",14,3524
+"memphis",15,3577
+"memphis",16,3993
+"memphis",17,7329
+"memphis",18,5750
+"memphis",19,3495
+"memphis",20,3400
+"memphis",21,3391
+"memphis",22,3249
+"memphis",23,4565
+"memphis",24,7700
+"memphis",25,6174
+"memphis",26,4101
+"memphis",27,3800
+"memphis",28,3798
+"memphis",29,3567
+"memphis",30,3769
+"memphis",31,6850
+"memphis",32,5791
+"memphis",33,3371
+"memphis",34,3041
+"memphis",35,2908
+"memphis",36,3005
+"memphis",37,3974
+"memphis",38,7090
+"memphis",39,5922
+"memphis",40,3748
+"memphis",41,3634
+"memphis",42,3314
+"memphis",43,2988
+"memphis",44,3956
+"memphis",45,6003
+"memphis",46,6344
+"memphis",47,3765
+"memphis",48,3465
+"memphis",49,3323
+"memphis",50,3207
+"memphis",51,4035
+"memphis",52,7298
+"memphis",53,6056
+"memphis",54,3451
+"memphis",55,3912
+"memphis",56,5143
+"memphis",57,3638
+"memphis",58,4164
+"memphis",59,6998
+"memphis",60,5639
+"memphis",61,3375
+"memphis",62,3069
+"memphis",63,2969
+"memphis",64,2937
+"memphis",65,3788
+"memphis",66,6542
+"memphis",67,5457
+"memphis",68,3018
+"memphis",69,3257
+"memphis",70,3802
+"memphis",71,3959
+"memphis",72,4350
+"memphis",73,7442
+"memphis",74,6285
+"memphis",75,3426
+"memphis",76,3384
+"memphis",77,3074
+"memphis",78,3322
+"memphis",79,3760
+"memphis",80,6617
+"memphis",81,5534
+"memphis",82,3041
+"memphis",83,2986
+"memphis",84,3098
+"memphis",85,3822
+"memphis",86,4469
+"memphis",87,6980
+"memphis",88,5908
+"memphis",89,3444
+"memphis",90,3356
+"miami",1,3702
+"miami",2,4182
+"miami",3,5300
+"miami",4,3787
+"miami",5,3023
+"miami",6,3574
+"miami",7,3745
+"miami",8,4046
+"miami",9,4393
+"miami",10,5578
+"miami",11,3986
+"miami",12,3416
+"miami",13,3228
+"miami",14,3153
+"miami",15,2986
+"miami",16,3339
+"miami",17,4667
+"miami",18,3427
+"miami",19,2974
+"miami",20,2897
+"miami",21,2839
+"miami",22,2924
+"miami",23,3514
+"miami",24,4566
+"miami",25,3450
+"miami",26,3169
+"miami",27,2826
+"miami",28,2766
+"miami",29,3296
+"miami",30,3503
+"miami",31,4747
+"miami",32,3116
+"miami",33,2470
+"miami",34,2446
+"miami",35,2373
+"miami",36,2491
+"miami",37,2901
+"miami",38,4372
+"miami",39,3268
+"miami",40,2989
+"miami",41,2918
+"miami",42,2981
+"miami",43,2916
+"miami",44,3179
+"miami",45,4424
+"miami",46,3133
+"miami",47,2341
+"miami",48,2547
+"miami",49,2258
+"miami",50,2626
+"miami",51,2827
+"miami",52,4299
+"miami",53,3013
+"miami",54,2757
+"miami",55,2874
+"miami",56,2834
+"miami",57,2656
+"miami",58,3114
+"miami",59,4215
+"miami",60,2937
+"miami",61,2631
+"miami",62,2151
+"miami",63,2320
+"miami",64,2454
+"miami",65,2920
+"miami",66,3910
+"miami",67,2841
+"miami",68,2440
+"miami",69,2309
+"miami",70,2692
+"miami",71,2985
+"miami",72,3468
+"miami",73,4861
+"miami",74,3125
+"miami",75,2722
+"miami",76,2820
+"miami",77,2738
+"miami",78,2633
+"miami",79,3212
+"miami",80,4067
+"miami",81,3037
+"miami",82,2432
+"miami",83,2448
+"miami",84,2605
+"miami",85,3145
+"miami",86,3532
+"miami",87,4544
+"miami",88,3382
+"miami",89,2737
+"miami",90,2943
+"milwaukee",1,3237
+"milwaukee",2,3763
+"milwaukee",3,4897
+"milwaukee",4,5319
+"milwaukee",5,3536
+"milwaukee",6,3281
+"milwaukee",7,3383
+"milwaukee",8,3742
+"milwaukee",9,4439
+"milwaukee",10,6221
+"milwaukee",11,6001
+"milwaukee",12,4012
+"milwaukee",13,3480
+"milwaukee",14,3664
+"milwaukee",15,3490
+"milwaukee",16,4000
+"milwaukee",17,5549
+"milwaukee",18,5660
+"milwaukee",19,3261
+"milwaukee",20,3302
+"milwaukee",21,3397
+"milwaukee",22,3646
+"milwaukee",23,4789
+"milwaukee",24,6957
+"milwaukee",25,7075
+"milwaukee",26,4353
+"milwaukee",27,4127
+"milwaukee",28,3827
+"milwaukee",29,4152
+"milwaukee",30,4173
+"milwaukee",31,6803
+"milwaukee",32,6338
+"milwaukee",33,3438
+"milwaukee",34,3196
+"milwaukee",35,3123
+"milwaukee",36,3132
+"milwaukee",37,4536
+"milwaukee",38,6464
+"milwaukee",39,6493
+"milwaukee",40,3938
+"milwaukee",41,3986
+"milwaukee",42,3706
+"milwaukee",43,3436
+"milwaukee",44,3965
+"milwaukee",45,6149
+"milwaukee",46,6282
+"milwaukee",47,3414
+"milwaukee",48,3157
+"milwaukee",49,3220
+"milwaukee",50,2937
+"milwaukee",51,3747
+"milwaukee",52,5682
+"milwaukee",53,6196
+"milwaukee",54,4099
+"milwaukee",55,3527
+"milwaukee",56,4575
+"milwaukee",57,3635
+"milwaukee",58,3919
+"milwaukee",59,6215
+"milwaukee",60,6227
+"milwaukee",61,3199
+"milwaukee",62,3257
+"milwaukee",63,3004
+"milwaukee",64,3170
+"milwaukee",65,3638
+"milwaukee",66,6165
+"milwaukee",67,5877
+"milwaukee",68,3464
+"milwaukee",69,3307
+"milwaukee",70,3900
+"milwaukee",71,3914
+"milwaukee",72,4603
+"milwaukee",73,7006
+"milwaukee",74,6348
+"milwaukee",75,3844
+"milwaukee",76,3376
+"milwaukee",77,3192
+"milwaukee",78,3331
+"milwaukee",79,4057
+"milwaukee",80,6010
+"milwaukee",81,5741
+"milwaukee",82,3149
+"milwaukee",83,3371
+"milwaukee",84,3569
+"milwaukee",85,4086
+"milwaukee",86,4772
+"milwaukee",87,6857
+"milwaukee",88,6364
+"milwaukee",89,3504
+"milwaukee",90,3665
+"minneapolis",1,2589
+"minneapolis",2,2787
+"minneapolis",3,3121
+"minneapolis",4,2920
+"minneapolis",5,2502
+"minneapolis",6,2302
+"minneapolis",7,2475
+"minneapolis",8,2587
+"minneapolis",9,2916
+"minneapolis",10,3649
+"minneapolis",11,3400
+"minneapolis",12,2412
+"minneapolis",13,2617
+"minneapolis",14,2466
+"minneapolis",15,2510
+"minneapolis",16,2811
+"minneapolis",17,3251
+"minneapolis",18,3187
+"minneapolis",19,2456
+"minneapolis",20,2324
+"minneapolis",21,2267
+"minneapolis",22,2549
+"minneapolis",23,3183
+"minneapolis",24,3926
+"minneapolis",25,4170
+"minneapolis",26,2657
+"minneapolis",27,2717
+"minneapolis",28,2411
+"minneapolis",29,2894
+"minneapolis",30,3004
+"minneapolis",31,3646
+"minneapolis",32,3549
+"minneapolis",33,2237
+"minneapolis",34,2128
+"minneapolis",35,2078
+"minneapolis",36,2377
+"minneapolis",37,2456
+"minneapolis",38,3349
+"minneapolis",39,3270
+"minneapolis",40,2628
+"minneapolis",41,2692
+"minneapolis",42,2489
+"minneapolis",43,2535
+"minneapolis",44,2494
+"minneapolis",45,3239
+"minneapolis",46,3350
+"minneapolis",47,2246
+"minneapolis",48,2343
+"minneapolis",49,2148
+"minneapolis",50,2136
+"minneapolis",51,2212
+"minneapolis",52,3149
+"minneapolis",53,3126
+"minneapolis",54,2586
+"minneapolis",55,2647
+"minneapolis",56,3000
+"minneapolis",57,2630
+"minneapolis",58,2779
+"minneapolis",59,3619
+"minneapolis",60,3544
+"minneapolis",61,2316
+"minneapolis",62,2288
+"minneapolis",63,2314
+"minneapolis",64,2166
+"minneapolis",65,2568
+"minneapolis",66,3051
+"minneapolis",67,3155
+"minneapolis",68,2127
+"minneapolis",69,2248
+"minneapolis",70,2693
+"minneapolis",71,2678
+"minneapolis",72,2778
+"minneapolis",73,3567
+"minneapolis",74,3077
+"minneapolis",75,2463
+"minneapolis",76,2283
+"minneapolis",77,2482
+"minneapolis",78,2115
+"minneapolis",79,2427
+"minneapolis",80,3072
+"minneapolis",81,3027
+"minneapolis",82,2269
+"minneapolis",83,2148
+"minneapolis",84,2355
+"minneapolis",85,2892
+"minneapolis",86,3051
+"minneapolis",87,3739
+"minneapolis",88,3258
+"minneapolis",89,2720
+"minneapolis",90,2469
+"nashville",1,2737
+"nashville",2,3235
+"nashville",3,4427
+"nashville",4,2957
+"nashville",5,2502
+"nashville",6,2457
+"nashville",7,2327
+"nashville",8,2544
+"nashville",9,3529
+"nashville",10,5069
+"nashville",11,2997
+"nashville",12,3081
+"nashville",13,2751
+"nashville",14,2461
+"nashville",15,2683
+"nashville",16,2960
+"nashville",17,4647
+"nashville",18,3156
+"nashville",19,3015
+"nashville",20,2558
+"nashville",21,2668
+"nashville",22,2400
+"nashville",23,3492
+"nashville",24,5475
+"nashville",25,3924
+"nashville",26,3763
+"nashville",27,3291
+"nashville",28,2963
+"nashville",29,3375
+"nashville",30,3534
+"nashville",31,5164
+"nashville",32,3370
+"nashville",33,3070
+"nashville",34,2607
+"nashville",35,2597
+"nashville",36,2687
+"nashville",37,3365
+"nashville",38,5054
+"nashville",39,3099
+"nashville",40,2908
+"nashville",41,2955
+"nashville",42,2905
+"nashville",43,2895
+"nashville",44,3374
+"nashville",45,5148
+"nashville",46,3626
+"nashville",47,3024
+"nashville",48,2363
+"nashville",49,2323
+"nashville",50,2604
+"nashville",51,2871
+"nashville",52,4940
+"nashville",53,3062
+"nashville",54,3003
+"nashville",55,3074
+"nashville",56,4236
+"nashville",57,3252
+"nashville",58,3597
+"nashville",59,6005
+"nashville",60,3603
+"nashville",61,3363
+"nashville",62,2932
+"nashville",63,2598
+"nashville",64,2704
+"nashville",65,3429
+"nashville",66,5102
+"nashville",67,3034
+"nashville",68,2762
+"nashville",69,2650
+"nashville",70,3026
+"nashville",71,3291
+"nashville",72,3573
+"nashville",73,5560
+"nashville",74,3482
+"nashville",75,3238
+"nashville",76,2733
+"nashville",77,2675
+"nashville",78,2705
+"nashville",79,3145
+"nashville",80,4940
+"nashville",81,3148
+"nashville",82,2897
+"nashville",83,2421
+"nashville",84,2773
+"nashville",85,3308
+"nashville",86,3811
+"nashville",87,5870
+"nashville",88,3421
+"nashville",89,3460
+"nashville",90,2891
+"new orleans",1,4194
+"new orleans",2,4361
+"new orleans",3,5849
+"new orleans",4,6695
+"new orleans",5,3934
+"new orleans",6,4030
+"new orleans",7,3782
+"new orleans",8,4447
+"new orleans",9,4901
+"new orleans",10,6938
+"new orleans",11,7701
+"new orleans",12,4321
+"new orleans",13,4185
+"new orleans",14,4439
+"new orleans",15,4247
+"new orleans",16,4815
+"new orleans",17,6353
+"new orleans",18,7076
+"new orleans",19,4215
+"new orleans",20,4449
+"new orleans",21,4195
+"new orleans",22,4553
+"new orleans",23,4843
+"new orleans",24,7757
+"new orleans",25,8695
+"new orleans",26,4703
+"new orleans",27,4637
+"new orleans",28,4618
+"new orleans",29,4959
+"new orleans",30,4987
+"new orleans",31,6898
+"new orleans",32,7311
+"new orleans",33,3670
+"new orleans",34,3681
+"new orleans",35,3754
+"new orleans",36,3817
+"new orleans",37,4750
+"new orleans",38,7174
+"new orleans",39,7451
+"new orleans",40,4336
+"new orleans",41,4857
+"new orleans",42,4362
+"new orleans",43,4560
+"new orleans",44,4668
+"new orleans",45,6265
+"new orleans",46,7513
+"new orleans",47,3896
+"new orleans",48,3778
+"new orleans",49,3800
+"new orleans",50,3767
+"new orleans",51,3907
+"new orleans",52,5858
+"new orleans",53,6873
+"new orleans",54,4398
+"new orleans",55,4400
+"new orleans",56,5403
+"new orleans",57,4303
+"new orleans",58,3771
+"new orleans",59,7104
+"new orleans",60,7559
+"new orleans",61,3845
+"new orleans",62,3849
+"new orleans",63,3541
+"new orleans",64,3762
+"new orleans",65,3856
+"new orleans",66,6024
+"new orleans",67,6358
+"new orleans",68,3528
+"new orleans",69,3576
+"new orleans",70,4544
+"new orleans",71,4523
+"new orleans",72,4827
+"new orleans",73,6497
+"new orleans",74,7408
+"new orleans",75,3879
+"new orleans",76,3882
+"new orleans",77,3758
+"new orleans",78,3859
+"new orleans",79,3682
+"new orleans",80,5713
+"new orleans",81,6495
+"new orleans",82,3473
+"new orleans",83,3291
+"new orleans",84,3606
+"new orleans",85,4631
+"new orleans",86,4878
+"new orleans",87,6616
+"new orleans",88,6665
+"new orleans",89,3954
+"new orleans",90,4236
+"new york",1,3300
+"new york",2,3202
+"new york",3,4138
+"new york",4,3716
+"new york",5,3270
+"new york",6,3260
+"new york",7,3438
+"new york",8,3427
+"new york",9,3930
+"new york",10,4939
+"new york",11,4368
+"new york",12,3812
+"new york",13,3523
+"new york",14,3444
+"new york",15,3378
+"new york",16,3403
+"new york",17,3760
+"new york",18,4468
+"new york",19,3412
+"new york",20,3377
+"new york",21,2605
+"new york",22,3552
+"new york",23,3993
+"new york",24,5399
+"new york",25,4716
+"new york",26,3534
+"new york",27,3703
+"new york",28,3608
+"new york",29,3722
+"new york",30,3868
+"new york",31,4626
+"new york",32,4348
+"new york",33,3163
+"new york",34,3074
+"new york",35,2363
+"new york",36,3266
+"new york",37,3700
+"new york",38,4780
+"new york",39,4407
+"new york",40,3627
+"new york",41,3823
+"new york",42,3663
+"new york",43,3430
+"new york",44,3480
+"new york",45,4732
+"new york",46,4309
+"new york",47,3242
+"new york",48,3104
+"new york",49,2955
+"new york",50,3051
+"new york",51,3255
+"new york",52,4356
+"new york",53,3754
+"new york",54,3240
+"new york",55,3561
+"new york",56,3783
+"new york",57,3343
+"new york",58,3394
+"new york",59,4790
+"new york",60,4299
+"new york",61,3284
+"new york",62,3165
+"new york",63,3065
+"new york",64,2960
+"new york",65,3292
+"new york",66,4027
+"new york",67,3625
+"new york",68,2907
+"new york",69,3088
+"new york",70,3629
+"new york",71,3763
+"new york",72,3841
+"new york",73,4629
+"new york",74,4117
+"new york",75,3525
+"new york",76,2967
+"new york",77,2920
+"new york",78,3163
+"new york",79,3086
+"new york",80,4308
+"new york",81,3810
+"new york",82,3079
+"new york",83,2823
+"new york",84,3321
+"new york",85,3478
+"new york",86,4067
+"new york",87,4778
+"new york",88,4138
+"new york",89,3354
+"new york",90,3755
+"oakland",1,11343
+"oakland",2,13831
+"oakland",3,19248
+"oakland",4,17894
+"oakland",5,10608
+"oakland",6,10445
+"oakland",7,10361
+"oakland",8,11443
+"oakland",9,14126
+"oakland",10,19400
+"oakland",11,17079
+"oakland",12,10517
+"oakland",13,10313
+"oakland",14,10342
+"oakland",15,10915
+"oakland",16,13296
+"oakland",17,18756
+"oakland",18,16708
+"oakland",19,9816
+"oakland",20,9950
+"oakland",21,10450
+"oakland",22,11444
+"oakland",23,13950
+"oakland",24,19696
+"oakland",25,18134
+"oakland",26,11190
+"oakland",27,10503
+"oakland",28,10442
+"oakland",29,12463
+"oakland",30,13504
+"oakland",31,20264
+"oakland",32,17473
+"oakland",33,10564
+"oakland",34,9875
+"oakland",35,9802
+"oakland",36,10984
+"oakland",37,14361
+"oakland",38,20348
+"oakland",39,17492
+"oakland",40,10271
+"oakland",41,10247
+"oakland",42,10450
+"oakland",43,11358
+"oakland",44,14058
+"oakland",45,18857
+"oakland",46,14479
+"oakland",47,10438
+"oakland",48,10135
+"oakland",49,10156
+"oakland",50,11058
+"oakland",51,13649
+"oakland",52,20775
+"oakland",53,17418
+"oakland",54,11584
+"oakland",55,10785
+"oakland",56,13268
+"oakland",57,10767
+"oakland",58,14293
+"oakland",59,20743
+"oakland",60,17912
+"oakland",61,10563
+"oakland",62,9875
+"oakland",63,9765
+"oakland",64,10847
+"oakland",65,14279
+"oakland",66,20740
+"oakland",67,18332
+"oakland",68,10153
+"oakland",69,9757
+"oakland",70,10410
+"oakland",71,11439
+"oakland",72,14325
+"oakland",73,20789
+"oakland",74,17579
+"oakland",75,10834
+"oakland",76,9938
+"oakland",77,9885
+"oakland",78,11047
+"oakland",79,14430
+"oakland",80,21107
+"oakland",81,18353
+"oakland",82,10051
+"oakland",83,9789
+"oakland",84,10223
+"oakland",85,11964
+"oakland",86,15502
+"oakland",87,21990
+"oakland",88,19138
+"oakland",89,10881
+"oakland",90,10763
+"oklahoma city",1,7206
+"oklahoma city",2,8322
+"oklahoma city",3,10898
+"oklahoma city",4,9237
+"oklahoma city",5,6598
+"oklahoma city",6,6511
+"oklahoma city",7,6213
+"oklahoma city",8,6961
+"oklahoma city",9,8518
+"oklahoma city",10,10838
+"oklahoma city",11,9622
+"oklahoma city",12,7130
+"oklahoma city",13,6747
+"oklahoma city",14,6749
+"oklahoma city",15,7017
+"oklahoma city",16,8281
+"oklahoma city",17,10504
+"oklahoma city",18,9422
+"oklahoma city",19,6369
+"oklahoma city",20,6360
+"oklahoma city",21,6344
+"oklahoma city",22,6924
+"oklahoma city",23,8781
+"oklahoma city",24,11100
+"oklahoma city",25,10520
+"oklahoma city",26,6588
+"oklahoma city",27,6227
+"oklahoma city",28,6511
+"oklahoma city",29,6950
+"oklahoma city",30,8081
+"oklahoma city",31,11736
+"oklahoma city",32,9915
+"oklahoma city",33,6321
+"oklahoma city",34,6164
+"oklahoma city",35,6289
+"oklahoma city",36,6717
+"oklahoma city",37,8912
+"oklahoma city",38,11382
+"oklahoma city",39,9888
+"oklahoma city",40,6691
+"oklahoma city",41,7549
+"oklahoma city",42,6611
+"oklahoma city",43,7240
+"oklahoma city",44,8804
+"oklahoma city",45,11802
+"oklahoma city",46,10100
+"oklahoma city",47,6157
+"oklahoma city",48,6268
+"oklahoma city",49,6294
+"oklahoma city",50,6878
+"oklahoma city",51,8455
+"oklahoma city",52,11897
+"oklahoma city",53,10284
+"oklahoma city",54,6737
+"oklahoma city",55,6832
+"oklahoma city",56,7978
+"oklahoma city",57,6889
+"oklahoma city",58,8324
+"oklahoma city",59,11639
+"oklahoma city",60,9648
+"oklahoma city",61,6132
+"oklahoma city",62,5837
+"oklahoma city",63,6029
+"oklahoma city",64,6478
+"oklahoma city",65,8777
+"oklahoma city",66,12394
+"oklahoma city",67,9929
+"oklahoma city",68,6297
+"oklahoma city",69,6453
+"oklahoma city",70,6642
+"oklahoma city",71,8034
+"oklahoma city",72,9719
+"oklahoma city",73,12978
+"oklahoma city",74,10427
+"oklahoma city",75,6535
+"oklahoma city",76,6405
+"oklahoma city",77,6470
+"oklahoma city",78,6709
+"oklahoma city",79,9173
+"oklahoma city",80,12683
+"oklahoma city",81,10130
+"oklahoma city",82,6726
+"oklahoma city",83,6154
+"oklahoma city",84,6478
+"oklahoma city",85,7844
+"oklahoma city",86,9321
+"oklahoma city",87,12939
+"oklahoma city",88,10486
+"oklahoma city",89,6208
+"oklahoma city",90,6776
+"orlando",1,2846
+"orlando",2,2888
+"orlando",3,4015
+"orlando",4,3563
+"orlando",5,2572
+"orlando",6,2648
+"orlando",7,2845
+"orlando",8,2810
+"orlando",9,3524
+"orlando",10,4731
+"orlando",11,4185
+"orlando",12,3402
+"orlando",13,2915
+"orlando",14,2999
+"orlando",15,3041
+"orlando",16,3015
+"orlando",17,4236
+"orlando",18,3925
+"orlando",19,3101
+"orlando",20,2911
+"orlando",21,2694
+"orlando",22,2885
+"orlando",23,2979
+"orlando",24,4764
+"orlando",25,4435
+"orlando",26,3578
+"orlando",27,3137
+"orlando",28,2980
+"orlando",29,3100
+"orlando",30,3211
+"orlando",31,4484
+"orlando",32,4217
+"orlando",33,3050
+"orlando",34,2830
+"orlando",35,2807
+"orlando",36,2695
+"orlando",37,3170
+"orlando",38,4910
+"orlando",39,4154
+"orlando",40,3380
+"orlando",41,3392
+"orlando",42,3140
+"orlando",43,3169
+"orlando",44,3396
+"orlando",45,4654
+"orlando",46,4362
+"orlando",47,3228
+"orlando",48,2997
+"orlando",49,2806
+"orlando",50,2537
+"orlando",51,2749
+"orlando",52,4358
+"orlando",53,3895
+"orlando",54,3076
+"orlando",55,3151
+"orlando",56,3824
+"orlando",57,3009
+"orlando",58,3497
+"orlando",59,4841
+"orlando",60,4288
+"orlando",61,3091
+"orlando",62,2749
+"orlando",63,2767
+"orlando",64,2678
+"orlando",65,2579
+"orlando",66,4247
+"orlando",67,4169
+"orlando",68,2598
+"orlando",69,2472
+"orlando",70,3698
+"orlando",71,3531
+"orlando",72,3638
+"orlando",73,5208
+"orlando",74,4131
+"orlando",75,3165
+"orlando",76,3069
+"orlando",77,2666
+"orlando",78,2731
+"orlando",79,2995
+"orlando",80,4230
+"orlando",81,3780
+"orlando",82,2652
+"orlando",83,2472
+"orlando",84,2819
+"orlando",85,3220
+"orlando",86,3508
+"orlando",87,4715
+"orlando",88,4017
+"orlando",89,3001
+"orlando",90,3076
+"philadelphia",1,10448
+"philadelphia",2,11771
+"philadelphia",3,13206
+"philadelphia",4,11571
+"philadelphia",5,9178
+"philadelphia",6,9523
+"philadelphia",7,9949
+"philadelphia",8,11890
+"philadelphia",9,12015
+"philadelphia",10,15698
+"philadelphia",11,13163
+"philadelphia",12,10885
+"philadelphia",13,11125
+"philadelphia",14,10321
+"philadelphia",15,11104
+"philadelphia",16,10555
+"philadelphia",17,13355
+"philadelphia",18,11280
+"philadelphia",19,8669
+"philadelphia",20,9595
+"philadelphia",21,9160
+"philadelphia",22,10001
+"philadelphia",23,11739
+"philadelphia",24,16008
+"philadelphia",25,13128
+"philadelphia",26,9849
+"philadelphia",27,10786
+"philadelphia",28,10442
+"philadelphia",29,10269
+"philadelphia",30,10287
+"philadelphia",31,14692
+"philadelphia",32,12541
+"philadelphia",33,8628
+"philadelphia",34,9032
+"philadelphia",35,8769
+"philadelphia",36,8978
+"philadelphia",37,10348
+"philadelphia",38,14634
+"philadelphia",39,12134
+"philadelphia",40,9788
+"philadelphia",41,10468
+"philadelphia",42,10575
+"philadelphia",43,10483
+"philadelphia",44,10417
+"philadelphia",45,14209
+"philadelphia",46,12106
+"philadelphia",47,9442
+"philadelphia",48,8600
+"philadelphia",49,9359
+"philadelphia",50,9353
+"philadelphia",51,10552
+"philadelphia",52,13794
+"philadelphia",53,11441
+"philadelphia",54,9178
+"philadelphia",55,11506
+"philadelphia",56,12550
+"philadelphia",57,10007
+"philadelphia",58,11281
+"philadelphia",59,15560
+"philadelphia",60,12113
+"philadelphia",61,8874
+"philadelphia",62,9646
+"philadelphia",63,9215
+"philadelphia",64,8726
+"philadelphia",65,10097
+"philadelphia",66,14277
+"philadelphia",67,11405
+"philadelphia",68,8503
+"philadelphia",69,8930
+"philadelphia",70,11568
+"philadelphia",71,11413
+"philadelphia",72,12076
+"philadelphia",73,16498
+"philadelphia",74,13521
+"philadelphia",75,9341
+"philadelphia",76,9900
+"philadelphia",77,9818
+"philadelphia",78,10394
+"philadelphia",79,10789
+"philadelphia",80,15116
+"philadelphia",81,12312
+"philadelphia",82,8768
+"philadelphia",83,8882
+"philadelphia",84,9836
+"philadelphia",85,11750
+"philadelphia",86,12729
+"philadelphia",87,15964
+"philadelphia",88,13405
+"philadelphia",89,9869
+"philadelphia",90,10513
+"phoenix",1,5467
+"phoenix",2,6066
+"phoenix",3,8248
+"phoenix",4,7332
+"phoenix",5,5219
+"phoenix",6,5331
+"phoenix",7,5169
+"phoenix",8,6250
+"phoenix",9,7486
+"phoenix",10,9780
+"phoenix",11,8346
+"phoenix",12,6037
+"phoenix",13,5680
+"phoenix",14,6160
+"phoenix",15,5721
+"phoenix",16,6395
+"phoenix",17,8754
+"phoenix",18,7538
+"phoenix",19,5704
+"phoenix",20,5187
+"phoenix",21,5052
+"phoenix",22,5498
+"phoenix",23,7061
+"phoenix",24,9849
+"phoenix",25,8132
+"phoenix",26,5666
+"phoenix",27,5390
+"phoenix",28,5545
+"phoenix",29,5694
+"phoenix",30,6372
+"phoenix",31,8399
+"phoenix",32,7426
+"phoenix",33,4560
+"phoenix",34,4194
+"phoenix",35,4449
+"phoenix",36,4791
+"phoenix",37,6259
+"phoenix",38,9288
+"phoenix",39,7287
+"phoenix",40,5419
+"phoenix",41,5743
+"phoenix",42,5343
+"phoenix",43,5572
+"phoenix",44,6400
+"phoenix",45,8583
+"phoenix",46,7082
+"phoenix",47,4813
+"phoenix",48,4514
+"phoenix",49,4671
+"phoenix",50,4995
+"phoenix",51,6066
+"phoenix",52,8524
+"phoenix",53,6875
+"phoenix",54,4943
+"phoenix",55,5222
+"phoenix",56,5965
+"phoenix",57,5079
+"phoenix",58,6212
+"phoenix",59,8741
+"phoenix",60,6462
+"phoenix",61,4502
+"phoenix",62,4126
+"phoenix",63,4273
+"phoenix",64,4771
+"phoenix",65,5536
+"phoenix",66,8464
+"phoenix",67,6418
+"phoenix",68,4220
+"phoenix",69,4562
+"phoenix",70,5352
+"phoenix",71,5967
+"phoenix",72,6695
+"phoenix",73,9262
+"phoenix",74,6786
+"phoenix",75,5076
+"phoenix",76,4736
+"phoenix",77,4803
+"phoenix",78,5027
+"phoenix",79,6000
+"phoenix",80,8676
+"phoenix",81,6635
+"phoenix",82,4608
+"phoenix",83,4678
+"phoenix",84,4974
+"phoenix",85,6140
+"phoenix",86,7319
+"phoenix",87,9841
+"phoenix",88,7485
+"phoenix",89,5092
+"phoenix",90,5058
+"portland",1,2927
+"portland",2,2901
+"portland",3,3674
+"portland",4,2710
+"portland",5,2857
+"portland",6,2598
+"portland",7,2785
+"portland",8,2904
+"portland",9,3130
+"portland",10,4302
+"portland",11,3099
+"portland",12,3012
+"portland",13,3146
+"portland",14,2852
+"portland",15,2804
+"portland",16,3216
+"portland",17,3604
+"portland",18,2685
+"portland",19,2861
+"portland",20,2479
+"portland",21,2367
+"portland",22,2692
+"portland",23,3272
+"portland",24,4168
+"portland",25,3078
+"portland",26,2866
+"portland",27,2728
+"portland",28,2661
+"portland",29,2867
+"portland",30,2911
+"portland",31,3747
+"portland",32,3063
+"portland",33,2485
+"portland",34,2335
+"portland",35,2247
+"portland",36,2441
+"portland",37,2934
+"portland",38,3604
+"portland",39,3037
+"portland",40,2897
+"portland",41,2311
+"portland",42,2948
+"portland",43,2892
+"portland",44,3246
+"portland",45,3919
+"portland",46,2815
+"portland",47,2675
+"portland",48,2561
+"portland",49,2298
+"portland",50,2761
+"portland",51,2913
+"portland",52,3737
+"portland",53,3063
+"portland",54,2721
+"portland",55,2978
+"portland",56,3002
+"portland",57,2789
+"portland",58,2957
+"portland",59,3839
+"portland",60,2981
+"portland",61,2615
+"portland",62,2456
+"portland",63,2352
+"portland",64,2446
+"portland",65,2566
+"portland",66,3518
+"portland",67,2675
+"portland",68,2181
+"portland",69,2311
+"portland",70,2776
+"portland",71,2916
+"portland",72,3377
+"portland",73,4190
+"portland",74,3063
+"portland",75,2719
+"portland",76,2503
+"portland",77,2593
+"portland",78,2450
+"portland",79,2903
+"portland",80,3709
+"portland",81,3045
+"portland",82,2498
+"portland",83,2526
+"portland",84,2437
+"portland",85,3193
+"portland",86,3259
+"portland",87,4084
+"portland",88,3326
+"portland",89,2882
+"portland",90,2766
+"reno",1,2801
+"reno",2,3035
+"reno",3,4103
+"reno",4,2794
+"reno",5,2163
+"reno",6,2568
+"reno",7,2685
+"reno",8,3086
+"reno",9,2880
+"reno",10,5151
+"reno",11,3198
+"reno",12,3013
+"reno",13,2659
+"reno",14,2803
+"reno",15,2532
+"reno",16,3220
+"reno",17,4735
+"reno",18,3442
+"reno",19,2881
+"reno",20,2972
+"reno",21,2519
+"reno",22,2614
+"reno",23,3602
+"reno",24,5118
+"reno",25,3849
+"reno",26,2827
+"reno",27,2820
+"reno",28,2766
+"reno",29,2842
+"reno",30,3138
+"reno",31,4747
+"reno",32,3432
+"reno",33,2451
+"reno",34,2216
+"reno",35,2640
+"reno",36,2565
+"reno",37,3119
+"reno",38,4658
+"reno",39,3376
+"reno",40,2906
+"reno",41,3016
+"reno",42,2913
+"reno",43,2641
+"reno",44,3396
+"reno",45,5069
+"reno",46,3686
+"reno",47,2405
+"reno",48,2453
+"reno",49,2829
+"reno",50,2670
+"reno",51,2939
+"reno",52,4965
+"reno",53,3470
+"reno",54,2836
+"reno",55,2909
+"reno",56,3387
+"reno",57,2948
+"reno",58,3114
+"reno",59,4945
+"reno",60,3529
+"reno",61,2669
+"reno",62,2512
+"reno",63,2337
+"reno",64,2554
+"reno",65,2785
+"reno",66,4674
+"reno",67,3077
+"reno",68,2479
+"reno",69,2482
+"reno",70,3164
+"reno",71,3280
+"reno",72,3421
+"reno",73,5272
+"reno",74,3333
+"reno",75,2724
+"reno",76,2573
+"reno",77,2773
+"reno",78,2628
+"reno",79,3112
+"reno",80,4767
+"reno",81,3094
+"reno",82,2515
+"reno",83,2255
+"reno",84,2399
+"reno",85,2883
+"reno",86,3139
+"reno",87,4681
+"reno",88,3081
+"reno",89,2453
+"reno",90,2395
+"saint paul",1,2399
+"saint paul",2,2808
+"saint paul",3,4403
+"saint paul",4,3980
+"saint paul",5,2531
+"saint paul",6,2397
+"saint paul",7,2311
+"saint paul",8,2551
+"saint paul",9,3009
+"saint paul",10,5253
+"saint paul",11,4140
+"saint paul",12,2750
+"saint paul",13,2668
+"saint paul",14,2536
+"saint paul",15,2568
+"saint paul",16,2878
+"saint paul",17,4777
+"saint paul",18,3674
+"saint paul",19,2671
+"saint paul",20,2356
+"saint paul",21,2412
+"saint paul",22,2442
+"saint paul",23,3128
+"saint paul",24,5517
+"saint paul",25,4901
+"saint paul",26,3147
+"saint paul",27,2686
+"saint paul",28,2775
+"saint paul",29,3202
+"saint paul",30,3175
+"saint paul",31,4974
+"saint paul",32,4327
+"saint paul",33,2645
+"saint paul",34,2574
+"saint paul",35,2452
+"saint paul",36,2654
+"saint paul",37,3003
+"saint paul",38,5098
+"saint paul",39,4350
+"saint paul",40,2731
+"saint paul",41,2885
+"saint paul",42,2957
+"saint paul",43,3005
+"saint paul",44,2986
+"saint paul",45,4922
+"saint paul",46,4452
+"saint paul",47,2584
+"saint paul",48,2303
+"saint paul",49,2270
+"saint paul",50,2412
+"saint paul",51,2792
+"saint paul",52,4497
+"saint paul",53,3903
+"saint paul",54,2519
+"saint paul",55,2901
+"saint paul",56,3581
+"saint paul",57,2551
+"saint paul",58,2939
+"saint paul",59,5062
+"saint paul",60,4054
+"saint paul",61,2446
+"saint paul",62,2691
+"saint paul",63,2411
+"saint paul",64,2442
+"saint paul",65,2631
+"saint paul",66,4640
+"saint paul",67,3822
+"saint paul",68,2174
+"saint paul",69,2493
+"saint paul",70,2848
+"saint paul",71,2847
+"saint paul",72,3114
+"saint paul",73,4883
+"saint paul",74,3804
+"saint paul",75,2581
+"saint paul",76,2325
+"saint paul",77,2432
+"saint paul",78,2604
+"saint paul",79,2766
+"saint paul",80,4392
+"saint paul",81,3604
+"saint paul",82,2421
+"saint paul",83,2271
+"saint paul",84,2373
+"saint paul",85,2944
+"saint paul",86,3387
+"saint paul",87,4947
+"saint paul",88,4193
+"saint paul",89,2551
+"saint paul",90,2571
+"salt lake city",1,6594
+"salt lake city",2,6675
+"salt lake city",3,9435
+"salt lake city",4,9794
+"salt lake city",5,6157
+"salt lake city",6,6783
+"salt lake city",7,6168
+"salt lake city",8,6787
+"salt lake city",9,7694
+"salt lake city",10,10958
+"salt lake city",11,10440
+"salt lake city",12,6661
+"salt lake city",13,6203
+"salt lake city",14,6480
+"salt lake city",15,6214
+"salt lake city",16,6139
+"salt lake city",17,8310
+"salt lake city",18,10815
+"salt lake city",19,5415
+"salt lake city",20,5340
+"salt lake city",21,4990
+"salt lake city",22,5680
+"salt lake city",23,6075
+"salt lake city",24,9881
+"salt lake city",25,12336
+"salt lake city",26,6411
+"salt lake city",27,5449
+"salt lake city",28,5492
+"salt lake city",29,5681
+"salt lake city",30,5923
+"salt lake city",31,9103
+"salt lake city",32,11246
+"salt lake city",33,5065
+"salt lake city",34,5172
+"salt lake city",35,4658
+"salt lake city",36,4730
+"salt lake city",37,5890
+"salt lake city",38,9249
+"salt lake city",39,11256
+"salt lake city",40,5688
+"salt lake city",41,6052
+"salt lake city",42,5489
+"salt lake city",43,5149
+"salt lake city",44,6150
+"salt lake city",45,9521
+"salt lake city",46,11199
+"salt lake city",47,5076
+"salt lake city",48,5174
+"salt lake city",49,4572
+"salt lake city",50,4560
+"salt lake city",51,5172
+"salt lake city",52,8502
+"salt lake city",53,10550
+"salt lake city",54,5429
+"salt lake city",55,6070
+"salt lake city",56,6707
+"salt lake city",57,4889
+"salt lake city",58,4974
+"salt lake city",59,8593
+"salt lake city",60,9389
+"salt lake city",61,4903
+"salt lake city",62,4856
+"salt lake city",63,4839
+"salt lake city",64,5018
+"salt lake city",65,5216
+"salt lake city",66,8735
+"salt lake city",67,8518
+"salt lake city",68,4683
+"salt lake city",69,4594
+"salt lake city",70,5635
+"salt lake city",71,5795
+"salt lake city",72,6613
+"salt lake city",73,9871
+"salt lake city",74,9247
+"salt lake city",75,5111
+"salt lake city",76,4965
+"salt lake city",77,4752
+"salt lake city",78,4728
+"salt lake city",79,5353
+"salt lake city",80,8880
+"salt lake city",81,8925
+"salt lake city",82,4610
+"salt lake city",83,4524
+"salt lake city",84,4896
+"salt lake city",85,6113
+"salt lake city",86,6184
+"salt lake city",87,8998
+"salt lake city",88,9406
+"salt lake city",89,5195
+"salt lake city",90,4953
+"san antonio",1,2348
+"san antonio",2,2616
+"san antonio",3,3812
+"san antonio",4,3268
+"san antonio",5,2596
+"san antonio",6,2402
+"san antonio",7,2516
+"san antonio",8,2836
+"san antonio",9,3121
+"san antonio",10,5206
+"san antonio",11,4075
+"san antonio",12,3326
+"san antonio",13,2867
+"san antonio",14,2764
+"san antonio",15,2614
+"san antonio",16,2927
+"san antonio",17,4488
+"san antonio",18,3930
+"san antonio",19,2947
+"san antonio",20,2811
+"san antonio",21,2692
+"san antonio",22,2941
+"san antonio",23,3758
+"san antonio",24,5781
+"san antonio",25,4889
+"san antonio",26,3885
+"san antonio",27,3545
+"san antonio",28,3485
+"san antonio",29,3519
+"san antonio",30,3906
+"san antonio",31,4971
+"san antonio",32,4308
+"san antonio",33,3703
+"san antonio",34,3212
+"san antonio",35,3388
+"san antonio",36,3114
+"san antonio",37,3906
+"san antonio",38,5931
+"san antonio",39,4638
+"san antonio",40,4612
+"san antonio",41,3811
+"san antonio",42,3474
+"san antonio",43,3291
+"san antonio",44,4005
+"san antonio",45,5102
+"san antonio",46,4868
+"san antonio",47,4150
+"san antonio",48,3037
+"san antonio",49,2955
+"san antonio",50,2971
+"san antonio",51,3364
+"san antonio",52,5065
+"san antonio",53,4426
+"san antonio",54,3473
+"san antonio",55,4011
+"san antonio",56,3899
+"san antonio",57,3292
+"san antonio",58,3525
+"san antonio",59,5266
+"san antonio",60,4308
+"san antonio",61,3653
+"san antonio",62,3033
+"san antonio",63,2797
+"san antonio",64,2850
+"san antonio",65,3155
+"san antonio",66,4974
+"san antonio",67,4303
+"san antonio",68,3525
+"san antonio",69,2979
+"san antonio",70,3648
+"san antonio",71,2958
+"san antonio",72,3497
+"san antonio",73,3967
+"san antonio",74,4484
+"san antonio",75,3595
+"san antonio",76,1376
+"san antonio",77,157
+"san antonio",78,3059
+"san antonio",79,3594
+"san antonio",80,5526
+"san antonio",81,5212
+"san antonio",82,4022
+"san antonio",83,3292
+"san antonio",84,3589
+"san antonio",85,4399
+"san antonio",86,4572
+"san antonio",87,6236
+"san antonio",88,5333
+"san antonio",89,3676
+"san antonio",90,3632
+"san diego",1,3000
+"san diego",2,3465
+"san diego",3,4551
+"san diego",4,3149
+"san diego",5,2538
+"san diego",6,2356
+"san diego",7,3182
+"san diego",8,3116
+"san diego",9,4064
+"san diego",10,5091
+"san diego",11,3443
+"san diego",12,3751
+"san diego",13,3445
+"san diego",14,3445
+"san diego",15,3373
+"san diego",16,3317
+"san diego",17,4572
+"san diego",18,2920
+"san diego",19,3070
+"san diego",20,3035
+"san diego",21,2840
+"san diego",22,3164
+"san diego",23,3645
+"san diego",24,4589
+"san diego",25,3886
+"san diego",26,3728
+"san diego",27,3323
+"san diego",28,3386
+"san diego",29,3370
+"san diego",30,3422
+"san diego",31,5121
+"san diego",32,3544
+"san diego",33,3140
+"san diego",34,2932
+"san diego",35,2792
+"san diego",36,3036
+"san diego",37,3585
+"san diego",38,4780
+"san diego",39,3599
+"san diego",40,3545
+"san diego",41,3224
+"san diego",42,3630
+"san diego",43,3548
+"san diego",44,3382
+"san diego",45,5088
+"san diego",46,3535
+"san diego",47,3326
+"san diego",48,2918
+"san diego",49,2738
+"san diego",50,2773
+"san diego",51,3457
+"san diego",52,4566
+"san diego",53,3461
+"san diego",54,3536
+"san diego",55,3875
+"san diego",56,3460
+"san diego",57,3407
+"san diego",58,3787
+"san diego",59,5097
+"san diego",60,3783
+"san diego",61,3432
+"san diego",62,2988
+"san diego",63,2909
+"san diego",64,2832
+"san diego",65,3363
+"san diego",66,4710
+"san diego",67,3163
+"san diego",68,3130
+"san diego",69,2911
+"san diego",70,3430
+"san diego",71,3631
+"san diego",72,3979
+"san diego",73,5338
+"san diego",74,3488
+"san diego",75,3345
+"san diego",76,3188
+"san diego",77,3013
+"san diego",78,3058
+"san diego",79,3397
+"san diego",80,4902
+"san diego",81,3193
+"san diego",82,2985
+"san diego",83,2793
+"san diego",84,2841
+"san diego",85,3646
+"san diego",86,4006
+"san diego",87,4924
+"san diego",88,3364
+"san diego",89,3235
+"san diego",90,3130
+"san francisco",1,9724
+"san francisco",2,11150
+"san francisco",3,16980
+"san francisco",4,11596
+"san francisco",5,8714
+"san francisco",6,8231
+"san francisco",7,8127
+"san francisco",8,9101
+"san francisco",9,11278
+"san francisco",10,16464
+"san francisco",11,11849
+"san francisco",12,9142
+"san francisco",13,8074
+"san francisco",14,7866
+"san francisco",15,8562
+"san francisco",16,10379
+"san francisco",17,16446
+"san francisco",18,12393
+"san francisco",19,8650
+"san francisco",20,7909
+"san francisco",21,7865
+"san francisco",22,9019
+"san francisco",23,11672
+"san francisco",24,17217
+"san francisco",25,12720
+"san francisco",26,8537
+"san francisco",27,8195
+"san francisco",28,8257
+"san francisco",29,9053
+"san francisco",30,10790
+"san francisco",31,16304
+"san francisco",32,12315
+"san francisco",33,7645
+"san francisco",34,7064
+"san francisco",35,6887
+"san francisco",36,8221
+"san francisco",37,10309
+"san francisco",38,16546
+"san francisco",39,12451
+"san francisco",40,8427
+"san francisco",41,8184
+"san francisco",42,8102
+"san francisco",43,9008
+"san francisco",44,11485
+"san francisco",45,17972
+"san francisco",46,13166
+"san francisco",47,8651
+"san francisco",48,7320
+"san francisco",49,8521
+"san francisco",50,10259
+"san francisco",51,11607
+"san francisco",52,19374
+"san francisco",53,13409
+"san francisco",54,10366
+"san francisco",55,8945
+"san francisco",56,11269
+"san francisco",57,8130
+"san francisco",58,11005
+"san francisco",59,18522
+"san francisco",60,13043
+"san francisco",61,8185
+"san francisco",62,7519
+"san francisco",63,7427
+"san francisco",64,8877
+"san francisco",65,11317
+"san francisco",66,18413
+"san francisco",67,12254
+"san francisco",68,7806
+"san francisco",69,7129
+"san francisco",70,7969
+"san francisco",71,9285
+"san francisco",72,11574
+"san francisco",73,18712
+"san francisco",74,13495
+"san francisco",75,8040
+"san francisco",76,7181
+"san francisco",77,7615
+"san francisco",78,7938
+"san francisco",79,10678
+"san francisco",80,17163
+"san francisco",81,11959
+"san francisco",82,7120
+"san francisco",83,6304
+"san francisco",84,6586
+"san francisco",85,7787
+"san francisco",86,9845
+"san francisco",87,15496
+"san francisco",88,11690
+"san francisco",89,7356
+"san francisco",90,7185
+"tucson",1,3567
+"tucson",2,4334
+"tucson",3,4560
+"tucson",4,839
+"tucson",5,2891
+"tucson",6,3062
+"tucson",7,3407
+"tucson",8,4125
+"tucson",9,5005
+"tucson",10,6005
+"tucson",11,6107
+"tucson",12,4215
+"tucson",13,3770
+"tucson",14,3671
+"tucson",15,4133
+"tucson",16,4734
+"tucson",17,6279
+"tucson",18,5937
+"tucson",19,4113
+"tucson",20,3537
+"tucson",21,3475
+"tucson",22,3963
+"tucson",23,5299
+"tucson",24,7264
+"tucson",25,6504
+"tucson",26,4377
+"tucson",27,3933
+"tucson",28,4036
+"tucson",29,4429
+"tucson",30,5086
+"tucson",31,7139
+"tucson",32,6862
+"tucson",33,3998
+"tucson",34,3349
+"tucson",35,3370
+"tucson",36,3807
+"tucson",37,5223
+"tucson",38,7508
+"tucson",39,6830
+"tucson",40,4151
+"tucson",41,3669
+"tucson",42,3610
+"tucson",43,4138
+"tucson",44,4899
+"tucson",45,7070
+"tucson",46,7636
+"tucson",47,4437
+"tucson",48,3535
+"tucson",49,3325
+"tucson",50,4142
+"tucson",51,5337
+"tucson",52,7666
+"tucson",53,6915
+"tucson",54,4899
+"tucson",55,3592
+"tucson",56,5667
+"tucson",57,3650
+"tucson",58,5247
+"tucson",59,7962
+"tucson",60,7078
+"tucson",61,4042
+"tucson",62,3506
+"tucson",63,3440
+"tucson",64,3956
+"tucson",65,5016
+"tucson",66,7257
+"tucson",67,6646
+"tucson",68,4028
+"tucson",69,3657
+"tucson",70,4034
+"tucson",71,4393
+"tucson",72,5661
+"tucson",73,7567
+"tucson",74,6824
+"tucson",75,3804
+"tucson",76,3573
+"tucson",77,3313
+"tucson",78,3701
+"tucson",79,5199
+"tucson",80,7248
+"tucson",81,6365
+"tucson",82,3743
+"tucson",83,3371
+"tucson",84,3889
+"tucson",85,4568
+"tucson",86,5567
+"tucson",87,8449
+"tucson",88,6791
+"tucson",89,4047
+"tucson",90,3709
+"washington",1,1841
+"washington",2,2278
+"washington",3,3634
+"washington",4,659
+"washington",5,1282
+"washington",6,2104
+"washington",7,1691
+"washington",8,1928
+"washington",9,2554
+"washington",10,4599
+"washington",11,3963
+"washington",12,2188
+"washington",13,1893
+"washington",14,1764
+"washington",15,1840
+"washington",16,2503
+"washington",17,3983
+"washington",18,3345
+"washington",19,1931
+"washington",20,1953
+"washington",21,1739
+"washington",22,1896
+"washington",23,2768
+"washington",24,4182
+"washington",25,3679
+"washington",26,2153
+"washington",27,2028
+"washington",28,1889
+"washington",29,2096
+"washington",30,2516
+"washington",31,4106
+"washington",32,3695
+"washington",33,2003
+"washington",34,1757
+"washington",35,1702
+"washington",36,1958
+"washington",37,2795
+"washington",38,4195
+"washington",39,3968
+"washington",40,2335
+"washington",41,2264
+"washington",42,1960
+"washington",43,1935
+"washington",44,2625
+"washington",45,4000
+"washington",46,4189
+"washington",47,2145
+"washington",48,2019
+"washington",49,1929
+"washington",50,1987
+"washington",51,2745
+"washington",52,4530
+"washington",53,4124
+"washington",54,2195
+"washington",55,2200
+"washington",56,3461
+"washington",57,2081
+"washington",58,2727
+"washington",59,4306
+"washington",60,3840
+"washington",61,1952
+"washington",62,1872
+"washington",63,1727
+"washington",64,1887
+"washington",65,2528
+"washington",66,3836
+"washington",67,3459
+"washington",68,1913
+"washington",69,1872
+"washington",70,2132
+"washington",71,2417
+"washington",72,2914
+"washington",73,4232
+"washington",74,3875
+"washington",75,1940
+"washington",76,1871
+"washington",77,1767
+"washington",78,2007
+"washington",79,2544
+"washington",80,4260
+"washington",81,3703
+"washington",82,1814
+"washington",83,1635
+"washington",84,1802
+"washington",85,2258
+"washington",86,3037
+"washington",87,4453
+"washington",88,3923
+"washington",89,2144
+"washington",90,1996

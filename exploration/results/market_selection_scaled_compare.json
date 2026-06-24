@@ -1,0 +1,56 @@
+{
+  "dataset": {
+    "n_locations": 80,
+    "n_periods": 220,
+    "n_categories": 6,
+    "avg_pairwise_correlation": 0.43,
+    "compared_to": "40 locations x 105 periods"
+  },
+  "setup": {
+    "seed": 42,
+    "treatment_periods": 14,
+    "N": 3,
+    "effect_sizes": [-0.1, -0.05, 0, 0.05, 0.1],
+    "parallel": false,
+    "n_simulations_per_run": 385,
+    "reference": "ns=1000 (Meta default); lower ns scored against it"
+  },
+  "sweep": [
+    {
+      "ns": 1000,
+      "time_s": 40.38,
+      "speedup": 1,
+      "n_cells": 385,
+      "power_significance_agreement": 1,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 1,
+      "bestmarkets_selected_mde_agreement": 1,
+      "n_markets": 77
+    },
+    {
+      "ns": 500,
+      "time_s": 32.02,
+      "speedup": 1.26,
+      "n_cells": 385,
+      "power_significance_agreement": 0.9948,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 1,
+      "bestmarkets_selected_mde_agreement": 1,
+      "n_markets": 77
+    },
+    {
+      "ns": 250,
+      "time_s": 29.14,
+      "speedup": 1.39,
+      "n_cells": 385,
+      "power_significance_agreement": 1,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 1,
+      "bestmarkets_selected_mde_agreement": 1,
+      "n_markets": 77
+    }
+  ]
+}

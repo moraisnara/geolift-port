@@ -1,0 +1,84 @@
+{
+  "setup": {
+    "seed": 42,
+    "tp": 14,
+    "effect_sizes": [
+      -0.1,
+      0.0,
+      0.1
+    ],
+    "alpha": 0.1,
+    "workload": "all C(L,2) treated pairs x 3 effect sizes",
+    "engines": {
+      "r_original": "GeoLift:::pvalueCalc loop, ns=1000 (Meta default)",
+      "r_modified": "same engine, ns=100 (MARKETSEL_FAST preset, parameter-only)",
+      "python": "geolift_fast port, ns=1000 (full fidelity)"
+    }
+  },
+  "scaling": [
+    {
+      "n_locations": 6,
+      "n_combos": 15,
+      "n_cells": 45,
+      "r_original_s": 3.38,
+      "r_modified_s": 2.78,
+      "python_s": 0.277,
+      "speedup_py_vs_r_original": 12.19,
+      "speedup_py_vs_r_modified": 10.03,
+      "speedup_r_modified_vs_original": 1.22
+    },
+    {
+      "n_locations": 8,
+      "n_combos": 28,
+      "n_cells": 84,
+      "r_original_s": 7.22,
+      "r_modified_s": 4.48,
+      "python_s": 0.659,
+      "speedup_py_vs_r_original": 10.95,
+      "speedup_py_vs_r_modified": 6.79,
+      "speedup_r_modified_vs_original": 1.61
+    },
+    {
+      "n_locations": 10,
+      "n_combos": 45,
+      "n_cells": 135,
+      "r_original_s": 11.78,
+      "r_modified_s": 6.61,
+      "python_s": 1.323,
+      "speedup_py_vs_r_original": 8.9,
+      "speedup_py_vs_r_modified": 5.0,
+      "speedup_r_modified_vs_original": 1.78
+    },
+    {
+      "n_locations": 12,
+      "n_combos": 66,
+      "n_cells": 198,
+      "r_original_s": 14.05,
+      "r_modified_s": 11.55,
+      "python_s": 1.388,
+      "speedup_py_vs_r_original": 10.12,
+      "speedup_py_vs_r_modified": 8.32,
+      "speedup_r_modified_vs_original": 1.22
+    },
+    {
+      "n_locations": 14,
+      "n_combos": 91,
+      "n_cells": 273,
+      "r_original_s": 20.16,
+      "r_modified_s": 13.43,
+      "python_s": 1.823,
+      "speedup_py_vs_r_original": 11.06,
+      "speedup_py_vs_r_modified": 7.37,
+      "speedup_r_modified_vs_original": 1.5
+    }
+  ],
+  "agreement": {
+    "at_n_locations": 14,
+    "n_cells": 273,
+    "compared": "R original vs Python (both ns=1000)",
+    "significance_agreement": 0.9927,
+    "att_max_abs_diff": 8.56e-08,
+    "scaled_l2_max_abs_diff": 1.96e-09,
+    "pvalue_mean_abs_diff": 0.0046
+  }
+}

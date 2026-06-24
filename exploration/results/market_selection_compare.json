@@ -1,0 +1,62 @@
+{
+  "setup": {
+    "seed": 42,
+    "locations_in_pool": 20,
+    "treatment_periods": 15,
+    "N": 2,
+    "effect_sizes": [-0.15, -0.1, -0.05, 2.77555756e-17, 0.05, 0.1, 0.15],
+    "parallel": false,
+    "n_simulations_per_run": 112,
+    "reference": "ns=1000 (Meta default); lower ns scored against it"
+  },
+  "sweep": [
+    {
+      "ns": 1000,
+      "time_s": 7.78,
+      "speedup": 1,
+      "n_cells": 112,
+      "power_significance_agreement": 1,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 1,
+      "bestmarkets_selected_mde_agreement": 1,
+      "n_markets": 16
+    },
+    {
+      "ns": 500,
+      "time_s": 5.67,
+      "speedup": 1.37,
+      "n_cells": 112,
+      "power_significance_agreement": 0.9732,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 0.8,
+      "bestmarkets_selected_mde_agreement": 0.875,
+      "n_markets": 16
+    },
+    {
+      "ns": 250,
+      "time_s": 5.66,
+      "speedup": 1.37,
+      "n_cells": 112,
+      "power_significance_agreement": 0.9732,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 0.8,
+      "bestmarkets_selected_mde_agreement": 0.875,
+      "n_markets": 16
+    },
+    {
+      "ns": 100,
+      "time_s": 5.28,
+      "speedup": 1.47,
+      "n_cells": 112,
+      "power_significance_agreement": 0.9286,
+      "avg_att_max_abs_diff": 0,
+      "scaled_l2_imbalance_max_abs_diff": 0,
+      "bestmarkets_top5_overlap": 0.8,
+      "bestmarkets_selected_mde_agreement": 0.75,
+      "n_markets": 16
+    }
+  ]
+}

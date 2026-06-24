@@ -1,0 +1,17 @@
+Instalando pacote em 'C:/Users/naral/AppData/Local/R/win-library/4.6'
+(como 'lib' não foi especificado)
+* installing *source* package 'GeoLift' ...
+** this is package 'GeoLift' version '2.7.5'
+** using non-staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+* DONE (GeoLift)
+FINAL GeoLift available: TRUE 

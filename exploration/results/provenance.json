@@ -1,0 +1,7 @@
+{
+  "seed": 42,
+  "r_version": "R version 4.6.0 (2026-04-24 ucrt)",
+  "example": "GeoLift Walkthrough: chicago+portland, t=91..105",
+  "augsynth_commit": "06415b4 (pre-PR#88)",
+  "note": "Statistics are deterministic given SEED; timings vary by machine/run."
+}

@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "n_combos": 23,
+  "N": 2,
+  "effect_sizes": [-0.1, -0.05, 0, 0.05, 0.1],
+  "ns": 1000,
+  "tp": 14,
+  "alpha": 0.1,
+  "n_cells": 115,
+  "engine": "R pvalueCalc loop (sequential)",
+  "time_s": 9.75
+}

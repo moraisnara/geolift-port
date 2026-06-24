@@ -1,0 +1,11 @@
+{
+  "n_locations": 6,
+  "n_combos": 15,
+  "n_cells": 45,
+  "tp": 14,
+  "ns": 100,
+  "effect_sizes": [-0.1, 0, 0.1],
+  "seed": 42,
+  "time_s": 2.78,
+  "ms_per_cell": 61.78
+}

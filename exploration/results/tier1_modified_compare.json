@@ -1,0 +1,18 @@
+[
+  {
+    "version": "default params (ns=1000)",
+    "time_s": 14.22,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.017,
+    "speedup": 1
+  },
+  {
+    "version": "fast preset (ns=200)",
+    "time_s": 4.85,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.005,
+    "speedup": 2.93
+  }
+]

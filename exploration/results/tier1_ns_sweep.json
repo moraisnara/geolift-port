@@ -1,0 +1,34 @@
+[
+  {
+    "ns": 1000,
+    "time_s": 15.96,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.017,
+    "significant_at_0.10": true
+  },
+  {
+    "ns": 500,
+    "time_s": 11.44,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.016,
+    "significant_at_0.10": true
+  },
+  {
+    "ns": 200,
+    "time_s": 5.04,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.005,
+    "significant_at_0.10": true
+  },
+  {
+    "ns": 100,
+    "time_s": 3.99,
+    "ATT": 155.556,
+    "lift_pct": 5.4,
+    "pvalue": 0.01,
+    "significant_at_0.10": true
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "setup": {
+    "seed": 42,
+    "locations": "chicago+portland",
+    "duration_tp": 15,
+    "ns": 1000,
+    "es_grid": [0, 0.05, 0.1, 0.15]
+  },
+  "hypothesis": {
+    "H1_weights_es_invariant": "expect weights_max_abs_diff ~ 0 across es",
+    "H2_null_es_invariant": "if pvalue changes with es, the null is NOT reusable across es"
+  },
+  "per_es": [
+    {
+      "es": 0,
+      "weights_max_abs_diff_vs_es0": 0,
+      "cf_max_abs_diff_vs_es0": 0,
+      "att": 155.5559,
+      "pvalue": 0.021
+    },
+    {
+      "es": 0.05,
+      "weights_max_abs_diff_vs_es0": 0,
+      "cf_max_abs_diff_vs_es0": 0,
+      "att": 306.7509,
+      "pvalue": 0.02
+    },
+    {
+      "es": 0.1,
+      "weights_max_abs_diff_vs_es0": 0,
+      "cf_max_abs_diff_vs_es0": 0,
+      "att": 457.9459,
+      "pvalue": 0
+    },
+    {
+      "es": 0.15,
+      "weights_max_abs_diff_vs_es0": 0,
+      "cf_max_abs_diff_vs_es0": 0,
+      "att": 609.1409,
+      "pvalue": 0
+    }
+  ]
+}
