@@ -11,21 +11,25 @@ Run:  python geolift_py/compare_market_selection.py
 """
 import json
 import time
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from geolift_fast.market_selection import Panel, simulate_combo
+from _compare_common import DATA, RES, sig3, read_lower
 
-ROOT = Path(__file__).resolve().parents[1]
-RES = ROOT / "exploration" / "results"
 ALPHA, NS, TP, SEED = 0.1, 1000, 14, 42
 
 
 def mde_table(df):
     """Minimum detectable effect per combo: smallest positive EffectSize whose
-    cell is significant (power==1). NaN if none."""
+    cell is significant (power==1). NaN if none.
+
+    NOTE: this is a deliberately simple, positive-only symmetric metric used here
+    only to score R-vs-Python *agreement* (the same rule is applied to both sides,
+    so the agreement number is well-defined). It is NOT the same as the library's
+    `geolift_fast.best_markets` MDE, which reproduces R's BestMarkets rule (signed,
+    closest-to-zero significant effect + composite rank). Don't conflate the two."""
     pos = df[df.EffectSize > 0]
     out = {}
     for loc, g in pos.groupby("location"):
@@ -62,9 +66,8 @@ def _combo_worker(a):
 
 
 def main():
-    panel = Panel.from_long_csv(ROOT / "exploration" / "data" / "ms_subset_panel.csv")
-    r = pd.read_csv(RES / "ms_R_inner_powercurves.csv")
-    r["location"] = r["location"].str.lower()
+    panel = Panel.from_long_csv(DATA / "ms_subset_panel.csv")
+    r = read_lower(RES / "ms_R_inner_powercurves.csv")
     es_list = sorted(r.EffectSize.unique())
     combos = [s.split(", ") for s in pd.unique(r.location)]
     r_time = json.loads((RES / "ms_R_inner_time.json").read_text())["time_s"]
@@ -104,8 +107,8 @@ def main():
                    "r_ms_per_cell": round(1000 * r_time / len(j), 1),
                    "python_ms_per_cell": round(1000 * py_t / len(j), 1)},
         "agreement": {"significance_agreement": round(sig_agree, 4),
-                      "att_max_abs_diff": float(f"{att_diff:.3g}"),
-                      "scaled_l2_max_abs_diff": float(f"{l2_diff:.3g}"),
+                      "att_max_abs_diff": sig3(att_diff),
+                      "scaled_l2_max_abs_diff": sig3(l2_diff),
                       "pvalue_mean_abs_diff": round(pval_mad, 4),
                       "selected_mde_agreement": round(mde_match, 4),
                       "ranking_top5_overlap": round(top5, 3)},

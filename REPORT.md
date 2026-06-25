@@ -480,10 +480,10 @@ pc     = power_curves(panel, combos, treatment_periods=14,              # GeoLif
 best_markets(pc)                                                        # $BestMarkets
 ```
 
-Run head-to-head on `GeoLift_Test` (`compare_city_example.py`, identical combos): across **155
-cells**, ATT matches R to **4e-4**, scaled-L2 to **2e-8**, detected-lift to **2e-7**, significance
-agrees on **98.7%** (the few flips are α-boundary Monte-Carlo cases), and `best_markets` selects the
-**same market set** as R's `$BestMarkets` (100% top-10 overlap, identical MDE magnitudes).
+<!-- AUTO:citylift_compare:start -->
+Run head-to-head on `GeoLift_Test` (`compare_city_example.py`, identical combos): across **155 cells**, ATT matches R to **4e-04**, scaled-L2 to **2e-08**, detected-lift to **2e-07**, significance agrees on **98.7%** (the few flips are α-boundary Monte-Carlo cases), and `best_markets` selects the **same market set** as R's `$BestMarkets` (100% top-10 overlap, identical MDE magnitudes).
+<!-- AUTO:citylift_compare:end -->
+
 GeoLift's `GeoLiftMarketSelection` uses a correlation-based selector (`stochastic_market_selector`)
 rather than all pairs, so the notebook evaluates the exact combos R chose to keep the comparison
 cell-for-cell.
@@ -536,22 +536,23 @@ Geolift/
 
 ### Reproduce everything
 From the `Geolift/` root:
-1. `exploration/scripts/r_install_augsynth.R`, then `r_install_geolift.R` — install pinned deps.
-2. `exploration/scripts/run_experiments.R` — single-call experiments → `exploration/results/*.json`.
-3. `exploration/scripts/verify_fit_reuse.R` — cross-effect-size reuse check → `fit_reuse_verify.json`.
-4. `exploration/scripts/run_market_selection.R` — market-selection `ns` sweep → `market_selection_compare.json`.
-5. `exploration/scripts/make_realistic_data.R` — build the larger realistic panel → `data/realistic_panel.csv`.
-6. `exploration/scripts/run_market_selection_scaled.R` — scaled `ns` sweep → `market_selection_scaled_compare.json`.
-7. `exploration/scripts/profile_market_selection.R` — time-vs-`ns` fixed-cost floor → `market_selection_profile.json`.
-8. `geolift_py/fidelity_test.py` — Python fidelity → `results/fidelity.json`.
-9. `exploration/scripts/dump_market_cells.R` — R ground truth for the port (panel subset, PowerCurves, per-cell conformal internals) → `ms_subset_panel.csv`, `ms_truth_powercurves.csv`, `ms_truth_cells.json`.
-10. `geolift_py/validate_market_selection.py` — Python vs R per-cell internals (~1e-11) → `ms_python_validation.json`.
-11. `exploration/scripts/time_market_inner_R.R` — R inner-loop baseline on the port's combos → `ms_R_inner_powercurves.csv`, `ms_R_inner_time.json`.
-12. `geolift_py/compare_market_selection.py` — Python vs R head-to-head (timing + decision agreement) → `market_selection_python_compare.json`.
-13. `exploration/scripts/bench_scaling_R.R <L> [ns]` — one R scaling point (fresh process; `ns=1000` original, `ns=100` modified) → `results/bench/bench_R_L<L>_ns<ns>.{json,csv}`.
-14. `geolift_py/bench_scaling.py` — Python timings + 3-way `fixest`-style scaling plot + agreement → `bench_scaling.json`, `bench_scaling.png`.
-15. `pip install -e .` (repo root) — install the **`geolift_fast`** library; see [geolift_py/README.md](geolift_py/README.md) for the GitHub/GCP recipe and API.
-16. `exploration/scripts/build_city_example.R` — run R's `GeoLiftMarketSelection` on the canonical `GeoLift_Test` (40 US cities) → `data/geolift_test_panel.csv`, `results/citylift_R_powercurves.csv`, `results/citylift_R_bestmarkets.csv`.
-17. `geolift_py/compare_city_example.py` — Python vs R on `GeoLift_Test`, exact combos (per-cell + best-market agreement) → `results/citylift_python_compare.json`.
-18. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example on city data (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`), ending with the R-vs-Python match.
-9. `exploration/scripts/build_report.py` — render the tables above from the results.
+1. `exploration/scripts/r_install.R` — install pinned deps (augsynth @06415b4, then GeoLift).
+2. `exploration/scripts/r_ground_truth.R`, then `r_export_matrices.R` and `r_finalize_benchmark.R` — frozen R ground truth (writes `ground_truth/geolift_objects.rds`, the Y/Z donor-treated matrices, and `benchmark.json`) consumed by `fidelity_test.py`.
+3. `exploration/scripts/run_experiments.R` — single-call experiments → `exploration/results/*.json`.
+4. `exploration/scripts/verify_fit_reuse.R` — cross-effect-size reuse check → `fit_reuse_verify.json`.
+5. `exploration/scripts/run_market_selection.R` — market-selection `ns` sweep → `market_selection_compare.json`.
+6. `exploration/scripts/make_realistic_data.R` — build the larger realistic panel → `data/realistic_panel.csv`.
+7. `exploration/scripts/run_market_selection_scaled.R` — scaled `ns` sweep → `market_selection_scaled_compare.json`.
+8. `exploration/scripts/profile_market_selection.R` — time-vs-`ns` fixed-cost floor → `market_selection_profile.json`.
+9. `geolift_py/fidelity_test.py` — Python fidelity → `results/fidelity.json`.
+10. `exploration/scripts/dump_market_cells.R` — R ground truth for the port (panel subset, PowerCurves, per-cell conformal internals) → `ms_subset_panel.csv`, `ms_truth_powercurves.csv`, `ms_truth_cells.json`.
+11. `geolift_py/validate_market_selection.py` — Python vs R per-cell internals (~1e-11) → `ms_python_validation.json`.
+12. `exploration/scripts/time_market_inner_R.R` — R inner-loop baseline on the port's combos → `ms_R_inner_powercurves.csv`, `ms_R_inner_time.json`.
+13. `geolift_py/compare_market_selection.py` — Python vs R head-to-head (timing + decision agreement) → `market_selection_python_compare.json`.
+14. `exploration/scripts/bench_scaling_R.R <L> [ns]` — one R scaling point (fresh process; `ns=1000` original, `ns=100` modified) → `results/bench/bench_R_L<L>_ns<ns>.{json,csv}`.
+15. `geolift_py/bench_scaling.py` — Python timings + 3-way `fixest`-style scaling plot + agreement → `bench_scaling.json`, `bench_scaling.png`.
+16. `pip install -e .` (repo root) — install the **`geolift_fast`** library; see [geolift_py/README.md](geolift_py/README.md) for the GitHub/GCP recipe and API.
+17. `exploration/scripts/build_city_example.R` — run R's `GeoLiftMarketSelection` on the canonical `GeoLift_Test` (40 US cities) → `data/geolift_test_panel.csv`, `results/citylift_R_powercurves.csv`, `results/citylift_R_bestmarkets.csv`.
+18. `geolift_py/compare_city_example.py` — Python vs R on `GeoLift_Test`, exact combos (per-cell + best-market agreement) → `results/citylift_python_compare.json`.
+19. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example on city data (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`), ending with the R-vs-Python match.
+20. `exploration/scripts/build_report.py` — render the tables above from the results.

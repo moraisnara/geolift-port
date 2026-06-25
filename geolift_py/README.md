@@ -64,10 +64,13 @@ pc = power_curves(
     alpha=0.10,
     seed=42,                                       # statistics are deterministic given seed
 )
-# columns: location, duration, EffectSize, pvalue, power, AvgATT, AvgScaledL2Imbalance
+# columns: location, duration, EffectSize, pvalue, power, AvgATT,
+#          AvgDetectedLift, AvgScaledL2Imbalance
 
-# Rank markets by minimum detectable effect (smallest significant positive lift).
-ranking = best_markets(pc, alpha=0.10)            # columns: rank, location, duration, MDE
+# Rank markets by their MDE: the significant effect closest to zero in either
+# direction (can be negative), then a composite rank a la R's BestMarkets.
+ranking = best_markets(pc, alpha=0.10)            # columns: rank, location,
+#          duration, MDE, AvgDetectedLift, abs_lift_in_zero
 print(ranking.head())
 ```
 

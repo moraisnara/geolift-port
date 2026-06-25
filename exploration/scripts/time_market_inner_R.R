@@ -13,7 +13,7 @@
 # =============================================================================
 suppressMessages({library(GeoLift); library(jsonlite); library(dplyr)})
 
-B <- "c:/Users/naral/Desktop/Nara/DP6/Geolift"
+B <- getwd()   # run from the Geolift/ repo root (see header)
 SEED <- 42; TP <- 14; ES <- seq(-0.1, 0.1, 0.05); NS <- 1000; ALPHA <- 0.1
 resdir <- file.path(B, "exploration/results")
 

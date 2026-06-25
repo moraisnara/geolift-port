@@ -180,6 +180,19 @@ def build_market_selection_python_compare():
     return md_table(rows) + note
 
 
+def build_citylift_compare():
+    d = load("citylift_python_compare.json")
+    pc, bm = d["per_cell"], d["best_markets"]
+    same = "same market set" if bm["selected_set_identical"] else "a different market set"
+    return (
+        f"Run head-to-head on `GeoLift_Test` (`compare_city_example.py`, identical combos): across "
+        f"**{pc['n_cells']} cells**, ATT matches R to **{pc['att_max_abs_diff']:.0e}**, scaled-L2 to "
+        f"**{pc['scaled_l2_max_abs_diff']:.0e}**, detected-lift to **{pc['detected_lift_max_abs_diff']:.0e}**, "
+        f"significance agrees on **{100*pc['significance_agreement']:.1f}%** (the few flips are α-boundary "
+        f"Monte-Carlo cases), and `best_markets` selects the **{same}** as R's `$BestMarkets` "
+        f"({round(100*bm['top10_set_overlap'])}% top-10 overlap, identical MDE magnitudes).")
+
+
 def build_bench_scaling():
     d = load("bench_scaling.json")
     s, a, rows = d["setup"], d["agreement"], d["scaling"]
@@ -252,6 +265,7 @@ BUILDERS = {
     "market_selection_scaled_compare": build_market_selection_scaled_compare,
     "market_selection_profile": build_market_selection_profile,
     "market_selection_python_compare": build_market_selection_python_compare,
+    "citylift_compare": build_citylift_compare,
     "bench_scaling": build_bench_scaling,
     "fidelity": build_fidelity,
     "provenance": build_provenance,
@@ -268,7 +282,7 @@ def main():
         if not pat.search(text):
             print(f"  WARN: markers for '{key}' not found in REPORT.md")
             continue
-        text = pat.sub(rf"\1\n{block}\n\2", text)
+        text = pat.sub(lambda m: f"{m.group(1)}\n{block}\n{m.group(2)}", text)
         print(f"  filled: {key}")
     REPORT.write_text(text, encoding="utf-8")
     print(f"Wrote {REPORT}")

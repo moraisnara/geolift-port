@@ -25,3 +25,9 @@ Thumbs.db
 # Scratch
 scratchpad/
 *.tmp
+
+# Generated run transcripts and regenerable R intermediates (not source of truth).
+# The ground-truth pipeline (r_ground_truth.R) rebuilds geolift_objects.rds on demand;
+# the report's numbers come from results/*.json, which stay committed.
+exploration/logs/
+*.rds

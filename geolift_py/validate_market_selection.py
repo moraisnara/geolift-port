@@ -6,18 +6,15 @@ Monte-Carlo error. Ground truth: exploration/results/ms_truth_cells.json
 (written by exploration/scripts/dump_market_cells.R).
 """
 import json
-from pathlib import Path
 import numpy as np
 
 from geolift_fast.market_selection import (
     Panel, ComboFit, conformal_resids, conformal_pval, _stat_func)
-
-ROOT = Path(__file__).resolve().parents[1]
-RES = ROOT / "exploration" / "results"
+from _compare_common import DATA, RES
 
 truth = json.loads((RES / "ms_truth_cells.json").read_text())
 setup = truth["setup"]
-panel = Panel.from_long_csv(ROOT / "exploration" / "data" / "ms_subset_panel.csv")
+panel = Panel.from_long_csv(DATA / "ms_subset_panel.csv")
 ns = setup["ns"]
 
 print(f"panel: {len(panel.locations)} units x {panel.T} periods  ns={ns}\n")

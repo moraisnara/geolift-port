@@ -11,3 +11,4 @@
 *.png binary
 *.rda binary
 *.RData binary
+*.rds binary

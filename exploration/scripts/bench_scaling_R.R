@@ -21,7 +21,7 @@ suppressMessages({library(GeoLift); library(jsonlite)})
 args <- commandArgs(trailingOnly = TRUE)
 L <- as.integer(args[1])
 NS <- if (length(args) >= 2) as.integer(args[2]) else 1000L
-B <- "c:/Users/naral/Desktop/Nara/DP6/Geolift"
+B <- getwd()   # run from the Geolift/ repo root (see header)
 SEED <- 42; TP <- 14; ES <- c(-0.1, 0.0, 0.1); ALPHA <- 0.1
 outdir <- file.path(B, "exploration/results/bench")
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)

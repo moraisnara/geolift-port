@@ -7,6 +7,7 @@ suppressMessages(library(GeoLift))
 
 outdir <- "exploration/ground_truth"
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
+set.seed(42)   # make the permutation p-values stored in the benchmark reproducible
 
 have_json <- requireNamespace("jsonlite", quietly = TRUE)
 timings <- list()
@@ -60,9 +61,6 @@ grab <- function(obj) {
 }
 # Dump full structure so we can see exact field names, then extract precisely.
 sink(file.path(outdir, "GeoTest_str.txt")); str(GeoTest, max.level = 2); sink()
-sink(file.path(outdir, "GeoTest_summary.txt")); print(summary(GeoTest)); sink()
-sink(file.path(outdir, "GeoTestBest_summary.txt")); print(summary(GeoTestBest)); sink()
-sink(file.path(outdir, "GeoTest_print.txt")); print(GeoTest); sink()
 
 # Known GeoLift object fields (from post_test_analysis.R)
 extract <- function(obj) {
@@ -101,7 +99,6 @@ pwr <- timed("GeoLiftPower_small", GeoLiftPower(
   effect_size = seq(0, 0.15, 0.05),
   treatment_periods = c(15),
   cpic = 7.5, side_of_test = "one_sided", parallel = FALSE))
-write.csv(pwr, file.path(outdir, "power_small.csv"), row.names = FALSE)
 
 # ---- 6. Persist everything --------------------------------------------------
 saveRDS(list(none = GeoTest, best = GeoTestBest), file.path(outdir, "geolift_objects.rds"))

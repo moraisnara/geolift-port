@@ -25,12 +25,10 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))   # find the geolift_fast package
+sys.path.insert(0, str(Path(__file__).resolve().parent))   # find the geolift_fast package + siblings
 from geolift_fast.market_selection import Panel, simulate_combo
+from _compare_common import DATA, RES, BENCH, sig3, read_lower
 
-ROOT = Path(__file__).resolve().parents[1]
-BENCH = ROOT / "exploration" / "results" / "bench"
-RES = ROOT / "exploration" / "results"
 SEED, TP, ALPHA = 42, 14, 0.1
 ES = [-0.1, 0.0, 0.1]
 NS_ORIG, NS_MOD = 1000, 100        # R original / R modified resample counts
@@ -51,7 +49,7 @@ def python_point(panel, L, ns):
 
 
 def main():
-    full = Panel.from_long_csv(ROOT / "exploration" / "data" / "realistic_panel.csv")
+    full = Panel.from_long_csv(DATA / "realistic_panel.csv")
     r_orig = {int(p.stem.split("L")[1].split("_")[0]): json.loads(p.read_text())
               for p in BENCH.glob(f"bench_R_L*_ns{NS_ORIG}.json")}
     r_mod = {int(p.stem.split("L")[1].split("_")[0]): json.loads(p.read_text())
@@ -76,15 +74,14 @@ def main():
 
     # --- results agreement at the largest size: R original vs Python (same ns) ---
     Lmax = Ls[-1]
-    r_big = pd.read_csv(BENCH / f"bench_R_L{Lmax}_ns{NS_ORIG}.csv")
-    r_big["location"] = r_big["location"].str.lower()
+    r_big = read_lower(BENCH / f"bench_R_L{Lmax}_ns{NS_ORIG}.csv")
     j = r_big.merge(py_cells_by_L[Lmax], on=["location", "EffectSize"],
                     suffixes=("_r", "_py"))
     agreement = {
         "at_n_locations": Lmax, "n_cells": len(j), "compared": "R original vs Python (both ns=1000)",
         "significance_agreement": round(float((j.power_r == j.power_py).mean()), 4),
-        "att_max_abs_diff": float(f"{(j.att_estimator - j.AvgATT).abs().max():.3g}"),
-        "scaled_l2_max_abs_diff": float(f"{(j.ScaledL2Imbalance - j.AvgScaledL2Imbalance).abs().max():.3g}"),
+        "att_max_abs_diff": sig3((j.att_estimator - j.AvgATT).abs().max()),
+        "scaled_l2_max_abs_diff": sig3((j.ScaledL2Imbalance - j.AvgScaledL2Imbalance).abs().max()),
         "pvalue_mean_abs_diff": round(float((j.pvalue_r - j.pvalue_py).abs().mean()), 4)}
 
     out = {"setup": {"seed": SEED, "tp": TP, "effect_sizes": ES, "alpha": ALPHA,

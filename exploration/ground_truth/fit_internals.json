@@ -1,9 +1,0 @@
-{
-  "weight_names": ["atlanta", "austin", "baltimore", "baton rouge", "boston", "cincinnati", "cleveland", "columbus", "dallas", "denver", "detroit", "honolulu", "houston", "indianapolis", "jacksonville", "kansas city", "las vegas", "los angeles", "memphis", "miami", "milwaukee", "minneapolis", "nashville", "new orleans", "new york", "oakland", "oklahoma city", "orlando", "philadelphia", "phoenix", "reno", "saint paul", "salt lake city", "san antonio", "san diego", "san francisco", "tucson", "washington"],
-  "weights": [1.262059647537e-09, 0.0465250816237, 6.96140929938e-10, 0.1335372615183, 2.566919226537e-09, 0.2271778372187, 2.189902584151e-09, 2.231270050833e-09, 0.07392293468219, 6.558718514251e-10, 6.703649784659e-10, 0.06726032779217, 0.00457058194231, 7.443670346506e-10, 1.199231714309e-09, 1.692682056868e-09, 1.786805958334e-09, 4.576004979137e-10, 5.620129089567e-10, 0.2027697472363, 3.536962770367e-09, 0.08998014568188, 0.06853170200245, 2.528938546071e-09, 0.004637975828497, 1.09586120189e-09, 9.076888324094e-10, 8.044266055447e-10, 1.673994157328e-09, 8.115917317098e-10, 0.03062699856948, 9.635513679832e-10, 2.416391303616e-09, 0.005386247804314, 0.04507312556393, 4.926353392494e-10, 4.242005362107e-10, 1.621970898855e-10],
-  "t_int": 91,
-  "progfunc": "none",
-  "fixedeff": true,
-  "scm": true,
-  "data_struct": ["X", "trt", "y", "synth_data", "time"]
-}

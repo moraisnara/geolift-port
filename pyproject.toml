@@ -20,10 +20,16 @@ dependencies = [
 
 [project.optional-dependencies]
 plot = ["matplotlib>=3.6"]
+test = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["geolift_py/tests"]
+# Let `pytest` from the repo root import the package without an editable install.
+pythonpath = ["geolift_py"]
 
 [project.urls]
-# Update this to your repository once pushed; it is what `pip install git+<url>` targets.
-Homepage = "https://github.com/your-org/geolift-fast"
+# This is what `pip install git+<url>` targets.
+Homepage = "https://github.com/moraisnara/geolift-port"
 
 # The library is the `geolift_fast` package under geolift_py/. The analysis/benchmark
 # scripts alongside it are NOT part of the installable package.

@@ -14,25 +14,20 @@ Output:
 Run:  python geolift_py/compare_city_example.py
 """
 import json
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 
 from geolift_fast import Panel, power_curves, best_markets
+from _compare_common import DATA, RES, sig3, read_lower
 
-ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "exploration" / "data"
-RES = ROOT / "exploration" / "results"
 ALPHA, NS, TP, SEED = 0.10, 1000, 14, 42
 
 
 def main():
     panel = Panel.from_long_csv(DATA / "geolift_test_panel.csv")
-    r_pc = pd.read_csv(RES / "citylift_R_powercurves.csv")
-    r_pc["location"] = r_pc["location"].str.lower()
-    r_bm = pd.read_csv(RES / "citylift_R_bestmarkets.csv")
-    r_bm["location"] = r_bm["location"].str.lower()
+    r_pc = read_lower(RES / "citylift_R_powercurves.csv")
+    r_bm = read_lower(RES / "citylift_R_bestmarkets.csv")
 
     combos = [s.split(", ") for s in pd.unique(r_pc.location)]
     es = sorted(r_pc.EffectSize.unique())
@@ -44,9 +39,9 @@ def main():
     per_cell = {
         "n_cells": int(len(j)),
         "significance_agreement": round(float((j.power_r == j.power_py).mean()), 4),
-        "att_max_abs_diff": float(f"{(j.AvgATT_r - j.AvgATT_py).abs().max():.3g}"),
-        "scaled_l2_max_abs_diff": float(f"{(j.AvgScaledL2Imbalance_r - j.AvgScaledL2Imbalance_py).abs().max():.3g}"),
-        "detected_lift_max_abs_diff": float(f"{(j.AvgDetectedLift_r - j.AvgDetectedLift_py).abs().max():.3g}"),
+        "att_max_abs_diff": sig3((j.AvgATT_r - j.AvgATT_py).abs().max()),
+        "scaled_l2_max_abs_diff": sig3((j.AvgScaledL2Imbalance_r - j.AvgScaledL2Imbalance_py).abs().max()),
+        "detected_lift_max_abs_diff": sig3((j.AvgDetectedLift_r - j.AvgDetectedLift_py).abs().max()),
         "pvalue_note": "R's $PowerCurves does not expose the p-value; only the significance flag is compared.",
     }
 

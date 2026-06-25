@@ -55,7 +55,8 @@ from geolift_fast import power_curves, best_markets, all_pairs, Panel
 panel = Panel.from_long_csv("panel.csv")          # columns: location, date, Y
 pc = power_curves(panel, all_pairs(panel, size=2),
                   treatment_periods=14, effect_sizes=[-0.1, 0, 0.1], ns=1000, seed=42)
-ranking = best_markets(pc, alpha=0.10)            # rank, location, duration, MDE
+ranking = best_markets(pc, alpha=0.10)            # rank, location, duration,
+#          MDE (signed, closest-to-zero significant effect), AvgDetectedLift, abs_lift_in_zero
 ```
 
 **Reproduce the benchmark** (numbers in `REPORT.md` are injected from

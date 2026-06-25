@@ -222,7 +222,8 @@ def power_curves(data, locations, treatment_periods, effect_sizes,
     Returns
     -------
     pandas.DataFrame with columns:
-        location, duration, EffectSize, pvalue, power, AvgATT, AvgScaledL2Imbalance
+        location, duration, EffectSize, pvalue, power, AvgATT,
+        AvgDetectedLift, AvgScaledL2Imbalance
     """
     if isinstance(data, Panel):
         panel = data
@@ -278,12 +279,12 @@ def best_markets(pc, alpha=None):
             continue
         neg = sig[sig.EffectSize < 0].EffectSize
         pos = sig[sig.EffectSize > 0].EffectSize
+        if not len(neg) and not len(pos):
+            continue            # significant only at es == 0 (no detectable nonzero effect)
         negative_mde = float(neg.max()) if len(neg) else lo - 1          # closest-to-0 neg
         positive_mde = float(pos.min()) if len(pos) else hi + 1          # closest-to-0 pos
         mde = (negative_mde if (positive_mde > abs(negative_mde) and negative_mde != 0)
                else positive_mde)
-        if mde == 0:
-            continue
         row = g[g.EffectSize == mde].iloc[0]
         lift = float(row.get("AvgDetectedLift", np.nan))
         recs.append({"location": loc, "duration": dur, "MDE": mde,
