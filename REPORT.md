@@ -464,20 +464,29 @@ for signatures.
 #### Worked example (mirrors the R walkthrough)
 
 [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) is a runnable
-Jupyter notebook that walks the **same example as GeoLift's R market-selection walkthrough** —
-`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets` — step for step on the frozen example
-panel (24 markets × 220 periods), with each R call annotated alongside its `geolift_fast`
-equivalent. The condensed form:
+Jupyter notebook that walks the **same example as GeoLift's R market-selection walkthrough** on the
+**canonical `GeoLift_Test` data (40 real US cities × 105 days)** — `GeoDataRead` →
+`GeoLiftMarketSelection` → `$BestMarkets` — step for step, with each R call annotated alongside its
+`geolift_fast` equivalent, and a closing section that lines Python up **against R's own output** to
+show the results match. The condensed form:
 
 ```python
-from geolift_fast import Panel, power_curves, best_markets, all_pairs
+from geolift_fast import Panel, power_curves, best_markets
 
-panel  = Panel.from_long_csv("exploration/data/ms_subset_panel.csv")  # GeoDataRead
-combos = all_pairs(panel, size=2)                                     # N = c(2)
-pc     = power_curves(panel, combos, treatment_periods=14,            # GeoLiftMarketSelection
+panel  = Panel.from_long_csv("exploration/data/geolift_test_panel.csv")  # GeoDataRead(GeoLift_Test)
+combos = [...]                                                           # the size-2 pairs R selected
+pc     = power_curves(panel, combos, treatment_periods=14,              # GeoLiftMarketSelection
                       effect_sizes=[-0.10, -0.05, 0.0, 0.05, 0.10], ns=1000, seed=42)
-best_markets(pc, alpha=0.10)                                          # $BestMarkets
+best_markets(pc)                                                        # $BestMarkets
 ```
+
+Run head-to-head on `GeoLift_Test` (`compare_city_example.py`, identical combos): across **155
+cells**, ATT matches R to **4e-4**, scaled-L2 to **2e-8**, detected-lift to **2e-7**, significance
+agrees on **98.7%** (the few flips are α-boundary Monte-Carlo cases), and `best_markets` selects the
+**same market set** as R's `$BestMarkets` (100% top-10 overlap, identical MDE magnitudes).
+GeoLift's `GeoLiftMarketSelection` uses a correlation-based selector (`stochastic_market_selector`)
+rather than all pairs, so the notebook evaluates the exact combos R chose to keep the comparison
+cell-for-cell.
 
 ---
 
@@ -542,5 +551,7 @@ From the `Geolift/` root:
 13. `exploration/scripts/bench_scaling_R.R <L> [ns]` — one R scaling point (fresh process; `ns=1000` original, `ns=100` modified) → `results/bench/bench_R_L<L>_ns<ns>.{json,csv}`.
 14. `geolift_py/bench_scaling.py` — Python timings + 3-way `fixest`-style scaling plot + agreement → `bench_scaling.json`, `bench_scaling.png`.
 15. `pip install -e .` (repo root) — install the **`geolift_fast`** library; see [geolift_py/README.md](geolift_py/README.md) for the GitHub/GCP recipe and API.
-16. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`).
+16. `exploration/scripts/build_city_example.R` — run R's `GeoLiftMarketSelection` on the canonical `GeoLift_Test` (40 US cities) → `data/geolift_test_panel.csv`, `results/citylift_R_powercurves.csv`, `results/citylift_R_bestmarkets.csv`.
+17. `geolift_py/compare_city_example.py` — Python vs R on `GeoLift_Test`, exact combos (per-cell + best-market agreement) → `results/citylift_python_compare.json`.
+18. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example on city data (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`), ending with the R-vs-Python match.
 9. `exploration/scripts/build_report.py` — render the tables above from the results.

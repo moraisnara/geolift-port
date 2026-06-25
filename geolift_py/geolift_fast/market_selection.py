@@ -124,8 +124,10 @@ class ComboFit:
         self.scaled_l2 = _scaled_l2(Z0, Z1, self.w)
         self.n_treated = int(self.trt.sum())
 
-    def att(self, es):
-        """ATT estimator for this combo at effect size es (pvalueCalc formula)."""
+    def att_lift(self, es):
+        """(ATT, detected_lift) for this combo at effect size es, matching
+        GeoLift's pvalueCalc: att_estimator = ave_incremental / tp and
+        lift_estimator (AvgDetectedLift) = ave_incremental / sum(counterfactual)."""
         tp, t0 = self.tp, self.t0
         Ypost = self.Y[:, t0:].copy()                    # (units, tp)
         Ypost[self.trt] *= (1.0 + es)                    # inflate treated post
@@ -134,8 +136,14 @@ class ComboFit:
         mu_d = self.mu[self.don]
         m1 = self.mu[self.trt].mean()
         y0_post = m1 + (Ypost[self.don] - mu_d[:, None]).T @ self.w   # (tp,)
-        ave_incremental = ave_treatment - y0_post.sum()
-        return ave_incremental / tp
+        y0_sum = y0_post.sum()
+        ave_incremental = ave_treatment - y0_sum
+        lift = ave_incremental / y0_sum if y0_sum != 0 else np.nan
+        return ave_incremental / tp, lift
+
+    def att(self, es):
+        """ATT estimator for this combo at effect size es (pvalueCalc formula)."""
+        return self.att_lift(es)[0]
 
 
 def conformal_resids(fit: ComboFit, es):
@@ -176,11 +184,13 @@ def simulate_combo(panel: Panel, treated, tp, effect_sizes, ns, rng, alpha=0.1):
     for es in effect_sizes:
         resids, t0 = conformal_resids(fit, es)
         pval, obs = conformal_pval(resids, t0, ns, rng)
+        att, lift = fit.att_lift(es)
         out.append(dict(
             location=", ".join(l.lower() for l in treated),
             duration=tp, EffectSize=es,
             pvalue=pval, power=int(pval < alpha),
-            AvgATT=fit.att(es), AvgScaledL2Imbalance=fit.scaled_l2))
+            AvgATT=att, AvgDetectedLift=lift,
+            AvgScaledL2Imbalance=fit.scaled_l2))
     return out
 
 
@@ -236,17 +246,54 @@ def all_pairs(panel, size=2, locations=None):
     return [list(c) for c in combinations(pool, size)]
 
 
-def best_markets(pc, alpha=0.1):
-    """Rank candidate markets by minimum detectable effect (MDE) — the smallest
-    positive EffectSize that is significant — best (smallest MDE) first. Returns a
-    DataFrame: location, duration, MDE (NaN if never significant), rank."""
-    pos = pc[pc.EffectSize > 0]
+def best_markets(pc, alpha=None):
+    """Rank candidate markets the way GeoLift's `GeoLiftMarketSelection(...)$BestMarkets`
+    does (pre_test_power.R steps 4-8), best first.
+
+    Per combo, pick the **minimum detectable effect (MDE)**: among the significant
+    cells (`power == 1`), the effect size closest to zero — considering BOTH
+    directions and preferring the negative side when it is significant at a smaller
+    magnitude (GeoLift's rule). Combos significant only at es == 0 are dropped.
+
+    Markets are then ordered by a composite of three dense sub-ranks — `|MDE|`,
+    `power`, and `abs_lift_in_zero = round(|AvgDetectedLift - MDE|, 3)` — exactly as
+    R averages them. (R's integer `rank` additionally breaks third-decimal ties in a
+    way that depends on solver-tolerance noise, so within a tie group the order may
+    differ from R by a position; the selected market *set* and per-combo MDE match.)
+
+    `alpha`, if given, recomputes significance from the `pvalue` column (otherwise the
+    `power` flag already set by `power_curves` at its own alpha is used).
+
+    Returns a DataFrame: rank, location, duration, MDE, AvgDetectedLift, abs_lift_in_zero.
+    """
+    pc = pc.copy()
+    if alpha is not None and "pvalue" in pc.columns:
+        pc["power"] = (pc["pvalue"] < alpha).astype(int)
+    es_all = sorted(pc.EffectSize.unique())
+    lo, hi = es_all[0], es_all[-1]
     recs = []
-    for (loc, dur), g in pos.groupby(["location", "duration"]):
-        sig = g[g.pvalue < alpha]
-        recs.append({"location": loc, "duration": dur,
-                     "MDE": float(sig.EffectSize.min()) if len(sig) else np.nan})
-    out = pd.DataFrame(recs).sort_values(
-        ["MDE", "location"], na_position="last").reset_index(drop=True)
-    out.insert(0, "rank", np.arange(1, len(out) + 1))
-    return out
+    for (loc, dur), g in pc.groupby(["location", "duration"]):
+        sig = g[g.power == 1]
+        if not len(sig):
+            continue
+        neg = sig[sig.EffectSize < 0].EffectSize
+        pos = sig[sig.EffectSize > 0].EffectSize
+        negative_mde = float(neg.max()) if len(neg) else lo - 1          # closest-to-0 neg
+        positive_mde = float(pos.min()) if len(pos) else hi + 1          # closest-to-0 pos
+        mde = (negative_mde if (positive_mde > abs(negative_mde) and negative_mde != 0)
+               else positive_mde)
+        if mde == 0:
+            continue
+        row = g[g.EffectSize == mde].iloc[0]
+        lift = float(row.get("AvgDetectedLift", np.nan))
+        recs.append({"location": loc, "duration": dur, "MDE": mde,
+                     "Power": int(row.power), "AvgDetectedLift": lift,
+                     "abs_lift_in_zero": round(abs(lift - mde), 3)})
+    out = pd.DataFrame(recs)
+    if not len(out):
+        return out
+    dr = lambda s: s.rank(method="dense")
+    score = (dr(out.MDE.abs()) + dr(out.Power) + dr(out.abs_lift_in_zero)) / 3.0
+    out["rank"] = score.rank(method="min").astype(int)
+    out = out.sort_values(["rank", "location"]).reset_index(drop=True)
+    return out[["rank", "location", "duration", "MDE", "AvgDetectedLift", "abs_lift_in_zero"]]

@@ -1,0 +1,35 @@
+{
+  "setup": {
+    "data": "GeoLift_Test (40 US cities x 105 days)",
+    "seed": 42,
+    "combos": 31,
+    "effect_sizes": [
+      -0.1,
+      -0.05,
+      0.0,
+      0.05,
+      0.1
+    ],
+    "ns": 1000,
+    "tp": 14,
+    "alpha": 0.1
+  },
+  "per_cell": {
+    "n_cells": 155,
+    "significance_agreement": 0.9871,
+    "att_max_abs_diff": 0.000428,
+    "scaled_l2_max_abs_diff": 2.1e-08,
+    "detected_lift_max_abs_diff": 1.86e-07,
+    "pvalue_note": "R's $PowerCurves does not expose the p-value; only the significance flag is compared."
+  },
+  "best_markets": {
+    "n_markets_python": 30,
+    "n_markets_r": 30,
+    "selected_set_identical": true,
+    "mde_magnitude_agreement": 1.0,
+    "mde_signed_agreement": 0.7667,
+    "top5_set_overlap": 1.0,
+    "top10_set_overlap": 1.0,
+    "note": "Per-combo MDE magnitudes match; the few signed differences are direction-only at equal magnitude (both \u00b1es significant), and exact integer rank within a tie group depends on a 3rd-decimal tiebreak \u2014 neither moves the selected market set."
+  }
+}
