@@ -1,0 +1,88 @@
+{
+  "setup": {
+    "example": "GeoLift Walkthrough: chicago+portland, t=91..105",
+    "panel": "GeoLift_Test (40 locations x 105 periods)",
+    "alpha": 0.1,
+    "ns": 1000,
+    "grid_size": 250,
+    "seed": 42,
+    "augsynth_commit": "06415b4 (pre-PR#88)",
+    "note": "Deterministic quantities match R to solver tolerance. The conformal p-value is Monte-Carlo: its residual vector is identical to R, so the limiting p-value is identical; R's ns=1000 value is one MC draw."
+  },
+  "equivalence": {
+    "none": {
+      "att_py": 155.55568688617035,
+      "att_r": 155.555927705223,
+      "att_rel_diff": 1.5481187777045678e-06,
+      "percent_lift_py": 5.4,
+      "percent_lift_r": 5.4,
+      "incremental_py": 4666.670606585103,
+      "incremental_r": 4666.677831156703,
+      "scaled_l2_py": 0.16363942167702827,
+      "scaled_l2_r": 0.1636394271164,
+      "weights_max_abs_diff": 4.303062139596192e-07,
+      "yhat_max_abs_diff": 0.0004866739454882918,
+      "jackknife_ci_py": [
+        -81.69127289466542,
+        378.3308983676411
+      ],
+      "jackknife_ci_r": [
+        -81.691126752665,
+        378.330948417504
+      ],
+      "jackknife_ci_max_abs_diff": 0.00014614200041762615,
+      "conformal_resid_max_abs_diff": 0.00024781401843654294,
+      "pvalue_limit_py": 0.011812,
+      "pvalue_limit_r_from_R_residuals": 0.011812,
+      "pvalue_r_ns1000_draw": 0.017
+    },
+    "ridge": {
+      "att_py": 156.80516521081879,
+      "att_r": 156.80540553167,
+      "att_rel_diff": 1.5326056547880243e-06,
+      "percent_lift_py": 5.5,
+      "percent_lift_r": 5.5,
+      "incremental_py": 4704.154956324579,
+      "incremental_r": 4704.162165950082,
+      "scaled_l2_py": 0.16256637392550996,
+      "scaled_l2_r": 0.1625663775967,
+      "weights_max_abs_diff": 4.2988357943501976e-07,
+      "yhat_max_abs_diff": 0.00048292859264620347,
+      "jackknife_ci_py": [
+        -79.73733807483495,
+        378.4916824678012
+      ],
+      "jackknife_ci_r": [
+        -79.737285730838,
+        378.49173213397
+      ],
+      "jackknife_ci_max_abs_diff": 5.234399695552838e-05,
+      "conformal_resid_max_abs_diff": 0.00023577346009062694,
+      "pvalue_limit_py": 0.01141,
+      "pvalue_limit_r_from_R_residuals": 0.01141,
+      "pvalue_r_ns1000_draw": 0.02,
+      "lambda_py": 1673101687.1264763,
+      "lambda_r": 1673101687.1264791,
+      "lambda_rel_diff": 1.7100113945450043e-15
+    }
+  },
+  "timing": {
+    "python": {
+      "point_pval_s": 0.0064,
+      "with_ci_conformal_s": 1.4858,
+      "with_ci_jackknife_s": 0.3603
+    },
+    "r": {
+      "point_pval_s": 13,
+      "with_ci_conformal_s": 18.78,
+      "ns": 1000,
+      "grid_size": 250,
+      "reps": "best-of-5 / best-of-3",
+      "note": "Single-threaded R GeoLift() wall time, best-of-N."
+    },
+    "speedup": {
+      "point_pval": 2031.2,
+      "with_ci_conformal": 12.6
+    }
+  }
+}

@@ -1,7 +1,8 @@
 # geolift-fast
 
-A fast Python port of [GeoLift](https://github.com/facebookincubator/GeoLift)'s
-**market-selection / power inference** inner loop.
+A fast Python port of [GeoLift](https://github.com/facebookincubator/GeoLift), covering
+**both halves** of the workflow: **market-selection / power inference** (pre-test) and the
+**single-test lift measurement** `GeoLift()` (post-test).
 
 It reproduces GeoLift's per-cell decisions — ATT, scaled-L2 imbalance, the conformal
 "iid" permutation p-value, and the selected-market ranking — to solver tolerance
@@ -11,7 +12,12 @@ parameter trade-off: the `ns` conformal permutations are drawn as one numpy matr
 instead of R's interpreted `sapply(1:ns, …)`, and the effect-size-invariant SCM fit is
 computed once per market combo and reused across every effect size ("lever 2").
 
-See [`../REPORT.md`](../REPORT.md) §7 for the validation and the R-vs-Python scaling benchmark.
+The post-test `geolift()` mirrors R's `GeoLift()` on an augsynth-faithful engine
+(fixed-effects + ridge SCM, conformal p-value, conformal-CI grid inversion with jackknife+
+fallback): deterministic quantities match R to solver tolerance, the conformal p-value
+matches in the limit (identical residual vector), ~12.6× faster on the CI task.
+
+See [`../REPORT.md`](../REPORT.md) §7 (pre-test) and §7d (post-test) for validation and benchmarks.
 
 ## Install
 
@@ -86,13 +92,34 @@ cells = simulate_combo(panel, ["chicago", "portland"], tp=14,
                        effect_sizes=[0.0, 0.05, 0.1], ns=1000, rng=rng, alpha=0.1)
 ```
 
+### Post-test measurement (`GeoLift()` equivalent)
+
+```python
+from geolift_fast import Panel, geolift
+
+panel = Panel.from_long_csv("panel.csv")
+r = geolift(
+    panel, locations=["chicago", "portland"],
+    treatment_start_time=91, treatment_end_time=105,   # 1-based period indices
+    model="none",                                       # or "ridge" / "best"
+    confidence_intervals=True, method="conformal",      # falls back to jackknife+ if conformal fails
+    ns=1000, alpha=0.10, seed=42,
+)
+print(r.summary())          # ATT, Percent Lift, Incremental, p-value, scaled-L2, CI
+r.att, r.percent_lift, r.pvalue, r.lower_conf_int, r.upper_conf_int, r.y_hat
+```
+
 ## Fidelity & scope
 
-- **Config covered:** the GeoLift market-selection default — `fixed_effects=TRUE`,
+- **Pre-test config covered:** the GeoLift market-selection default — `fixed_effects=TRUE`,
   `model="none"`, `conformal_type="iid"`, two-sided test (`stat = sum|x|`).
-- **Validated against R** to ~1e-11 on deterministic internals (weights, residuals,
-  observed statistic) and ~1e-8 on ATT; significance and ranking identical. P-values
-  differ only by Monte-Carlo error (independent RNG), never flipping a decision except
-  at the α boundary under the null.
-- The `augsynth` augmentation (`progfunc != "none"`) and non-iid conformal variants are
-  out of scope for this port.
+- **Post-test config covered:** `model` in {`none`, `ridge`, `best`}, `fixed_effects=TRUE`,
+  conformal "iid" p-value, conformal-CI grid inversion + jackknife+ fallback, stat tests
+  Total/Negative/Positive.
+- **Validated against R** to ~1e-11 on deterministic pre-test internals and to solver
+  tolerance on the post-test estimators (ATT, weights, counterfactual, scaled-L2, ridge λ,
+  jackknife+ CI). Significance and ranking identical; conformal p-values differ only by
+  Monte-Carlo error (independent RNG, identical limiting value), never flipping a decision
+  except at the α boundary under the null.
+- **Out of scope:** `model="GSYN"` (augsynth delegates it to the separate `gsynth` factor-model
+  package), non-iid conformal variants, and plotting helpers.

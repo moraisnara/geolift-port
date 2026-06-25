@@ -439,10 +439,10 @@ and now a **Python** library for the heavy combinatorial path.
 
 #### Function correspondence: GeoLift (R) → `geolift_fast` (Python)
 
-The port covers the **market-selection / power** path only (the combinatorial bottleneck of
-§6); the single-test measurement (`GeoLift`, `ConfIntervals`) and plotting helpers are out of
-scope by design. The mapping below is the public surface — see [geolift_py/README.md](geolift_py/README.md)
-for signatures.
+The port covers **both** halves of GeoLift: the **market-selection / power** path (the
+combinatorial bottleneck of §6) and the **post-test** single-test measurement (`GeoLift`,
+`ConfIntervals`; see §7d). Only the plotting helpers are out of scope by design. The mapping below
+is the public surface — see [geolift_py/README.md](geolift_py/README.md) for signatures.
 
 | GeoLift (R) — where | Purpose | `geolift_fast` (Python) |
 |---|---|---|
@@ -457,8 +457,9 @@ for signatures.
 | `augsynth(...)` fixed-effects SCM — [auxiliary.R:361](geolift_r_original/R/auxiliary.R) | Simplex-constrained donor weights (OSQP QP) | `scm_weights` / `ComboFit` |
 | `augsynth:::compute_permute_pval` + `type_of_test` stat — [pre_test_power.R:180](geolift_r_original/R/pre_test_power.R) | Conformal "iid" permutation p-value (two-sided `sum｜x｜` stat) | `conformal_resids` + `conformal_pval` |
 | scaled-L2 imbalance (`augsynth` internal) | Fit-quality metric reported per cell | `ComboFit.scaled_l2` (`_scaled_l2`) |
-| `GeoLift` — [post_test_analysis.R:189](geolift_r_original/R/post_test_analysis.R) | Single-test lift measurement | *out of scope* (Tier 1 path; see §4) |
-| `ConfIntervals` — [post_test_analysis.R:682](geolift_r_original/R/post_test_analysis.R) | Conformal CIs for one test | *out of scope* |
+| `GeoLift` — [post_test_analysis.R:189](geolift_r_original/R/post_test_analysis.R) | Single-test lift measurement (ATT, lift, p-value) | `geolift` (§7d) |
+| `ConfIntervals` — [post_test_analysis.R:682](geolift_r_original/R/post_test_analysis.R) | Conformal CIs + jackknife+ fallback for one test | inside `geolift` (`confidence_intervals=True`) |
+| augsynth ridge SCM + λ CV — [fit_ridgeaug_formatted/cv_lambda] | Ridge-augmented weights, leave-one-period-out λ | `post_test._fit` / `_cv_lambda` (`model="ridge"`) |
 | `GeoPlot` / `plot.GeoLift` — [plots.R](geolift_r_original/R/plots.R) | Plotting | *out of scope* (use pandas/matplotlib on the output) |
 
 #### Worked example (mirrors the R walkthrough)
@@ -488,6 +489,64 @@ GeoLift's `GeoLiftMarketSelection` uses a correlation-based selector (`stochasti
 rather than all pairs, so the notebook evaluates the exact combos R chose to keep the comparison
 cell-for-cell.
 
+### 7d. The other half: post-test estimation/inference in Python
+
+§7a–c port the **pre-test** path (market selection). The **post-test** path — R's `GeoLift()`,
+the call that measures the lift *after* an experiment runs — is now ported too, so the whole
+workflow can run in Python end to end. Like R, the estimation itself is delegated to a
+synthetic-control engine that reproduces **augsynth**'s formulas exactly: fixed-effects (de-meaned)
+SCM, ridge-augmented SCM with the same closed-form ridge correction and the same leave-one-period-out
+λ cross-validation, `predict.augsynth`'s counterfactual, the conformal permutation p-value (generalized
+to an arbitrary null + refit), conformal-CI grid inversion, and the deterministic jackknife+ CI it
+falls back to. The public surface is [`geolift_fast.geolift()`](geolift_py/geolift_fast/post_test.py),
+mirroring R's `GeoLift()`:
+
+```python
+from geolift_fast import Panel, geolift
+
+panel = Panel.from_long_csv("exploration/data/geolift_test_panel.csv")  # GeoDataRead(GeoLift_Test)
+r = geolift(panel, ["chicago", "portland"], treatment_start_time=91, treatment_end_time=105,
+            model="none", confidence_intervals=True)                    # = GeoLift(...)
+print(r.summary())   # ATT, Percent Lift, Incremental, p-value, scaled-L2, CI
+```
+
+Validated head-to-head against R's `GeoLift()` on the **same `GeoLift_Test` Walkthrough**
+(chicago + portland, t = 91…105), for both `model="none"` and `model="ridge"`:
+
+<!-- AUTO:posttest_compare:start -->
+**Equivalence** (GeoLift Walkthrough: chicago+portland, t=91..105):
+
+| Quantity | none: R → Py | ridge: R → Py | max diff |
+|---|---|---|---|
+| ATT (avg/period) | 155.5559 → 155.5557 | 156.8054 → 156.8052 | 2e-06 rel |
+| Percent lift | 5.4% → 5.4% | 5.5% → 5.5% | 0 |
+| Incremental | 4666.68 → 4666.67 | 4704.16 → 4704.15 | 2e-06 rel |
+| Scaled-L2 imbalance | 0.16364 → 0.16364 | 0.16257 → 0.16257 | 5e-08 |
+| Ridge λ (CV-selected) | — (n/a) | 1.6731e+09 → 1.6731e+09 | 2e-15 rel |
+| Donor weights (38) | vector match | vector match | 4e-07 |
+| Counterfactual ŷ (105) | vector match | vector match | 5e-04 |
+| jackknife+ CI | [-81.69, 378.33] → [-81.69, 378.33] | [-79.74, 378.49] → [-79.74, 378.49] | 1e-04 |
+| conformal p-value* | 0.017 (1 draw) / 0.0118 (limit) | 0.02 (1 draw) / 0.0114 (limit) | 0e+00 |
+
+_* The conformal p-value is the one Monte-Carlo quantity. Its **residual vector is identical** to R (max |Δ| 2e-04, solver tolerance), so the limiting (infinite-resample) permutation p-value is identical — shown as `(limit)`, computed from R's own residual vector and Python's, which agree. R's headline `0.0x` is a single `ns=1000` draw (MC SE ≈ 0.004), so it sits a fraction above the limit; two R runs with different seeds would differ by as much. Every other quantity matches to solver tolerance (OSQP vs R's `synth_qp`)._
+
+**Speed** (the post-test task, both at full `ns=1000` / 250-grid fidelity):
+
+| Task (single-threaded) | R `GeoLift()` | Python `geolift()` | speedup |
+|---|---|---|---|
+| ATT + p-value | 13 s | 0.0064 s | **2031×** † |
+| + conformal CI (250-grid) | 18.78 s | 1.4858 s | **12.6×** |
+
+_† R's `GeoLift()` obtains the headline p-value via `summary(augsynth)` → `conformal_inf`, which **always computes the full per-period conformal CI grid** (15 periods × 50-grid × 1000 refits) and discards it when CIs aren't requested — so the point+p-value call is nearly as costly as the CI call. Python computes only the headline p-value (one full-series refit + vectorized permutations). The clean apples-to-apples number is the **conformal-CI row (both compute the same 250-grid): ~12.6×**. Both are single-threaded, seed 42; deterministic results identical, p-value/CI equal in the limit._
+<!-- AUTO:posttest_compare:end -->
+
+The **only** non-deterministic quantity is the conformal p-value, and even there the underlying
+residual vector is identical to R — so the equivalence is a fact about the residuals, not an appeal
+to luck. `model="GSYN"` is deliberately **not** ported: augsynth delegates it to the separate
+`gsynth` factor-model package (`fit_prog_gsynth` just calls `gsynth::gsynth`), so reproducing it
+bit-for-bit would mean re-porting a third package; `model="best"` therefore chooses among
+{none, ridge} by scaled-L2.
+
 ---
 
 ## 8. Status & next step
@@ -512,9 +571,16 @@ cell-for-cell.
   constant on a log axis), 99%+ significance agreement, ATT to ~1e-8. Plot at `exploration/results/bench_scaling.png`.
 - ✅ **Python packaged as the `geolift_fast` library (§7c):** `pip install git+…` from GitHub /
   GCP, high-level `power_curves()`/`best_markets()` API. Mirrors R's three layers.
+- ✅ **Post-test half ported & validated head-to-head (§7d):** `geolift()` reproduces R's
+  `GeoLift()` for `model="none"` and `"ridge"` — ATT, lift, incremental, scaled-L2, donor weights,
+  counterfactual, ridge λ (to 2e-15) and the jackknife+ CI all match to **solver tolerance**; the
+  one Monte-Carlo quantity (conformal p-value) rests on a residual vector **identical** to R, so its
+  limiting value is identical. ~12.6× faster on the conformal-CI task (single-threaded). The whole
+  GeoLift workflow — pre-test selection **and** post-test measurement — now runs in Python.
 - ⏭️ **Next:** (a) scale the Python port to the full combinatorial grid and quantify the
   multiprocessing multiplier (where startup overhead amortizes); (b) re-run the Tier 1 `ns`
-  sweep across more datasets, focusing on borderline significance.
+  sweep across more datasets, focusing on borderline significance; (c) optionally port `model="GSYN"`
+  (needs the `gsynth` EM factor model) if a use case calls for it.
 
 ---
 
@@ -555,4 +621,8 @@ From the `Geolift/` root:
 17. `exploration/scripts/build_city_example.R` — run R's `GeoLiftMarketSelection` on the canonical `GeoLift_Test` (40 US cities) → `data/geolift_test_panel.csv`, `results/citylift_R_powercurves.csv`, `results/citylift_R_bestmarkets.csv`.
 18. `geolift_py/compare_city_example.py` — Python vs R on `GeoLift_Test`, exact combos (per-cell + best-market agreement) → `results/citylift_python_compare.json`.
 19. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example on city data (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`), ending with the R-vs-Python match.
-20. `exploration/scripts/build_report.py` — render the tables above from the results.
+20. `exploration/scripts/dump_posttest_truth.R` — R post-test ground truth (ATT, lift, incremental, p-value, conformal/jackknife+ CIs, weights, counterfactual, ridge λ) for none + ridge → `results/posttest_truth.json`.
+21. `exploration/scripts/dump_conformal_resids.R` — R's deterministic full-series-refit conformal residual vector (proves the p-value's limiting equivalence) → `results/conformal_resids.json`.
+22. `exploration/scripts/time_posttest_R.R` — R `GeoLift()` post-test wall time (point+p-value, +conformal CI) → `results/posttest_R_time.json`.
+23. `exploration/scripts/compare_posttest.py` — Python `geolift()` vs R post-test: equivalence + speed (§7d) → `results/posttest_compare.json`.
+24. `exploration/scripts/build_report.py` — render the tables above from the results.

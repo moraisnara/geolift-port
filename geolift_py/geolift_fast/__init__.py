@@ -1,10 +1,15 @@
 """
-geolift_fast — a fast Python port of GeoLift's market-selection / power inference.
+geolift_fast — a fast Python port of GeoLift, both halves of the workflow.
 
-Reproduces GeoLift's per-cell decisions (ATT, scaled-L2, conformal iid p-value,
-selected-market ranking) to solver tolerance, while running ~10-14x faster than
-the R inner loop single-threaded — by vectorising the permutation draw and reusing
-the effect-size-invariant SCM fit across effect sizes.
+Pre-test (market selection / power): reproduces GeoLift's per-cell decisions (ATT,
+scaled-L2, conformal iid p-value, selected-market ranking) to solver tolerance, while
+running ~10-14x faster than the R inner loop single-threaded — by vectorising the
+permutation draw and reusing the effect-size-invariant SCM fit across effect sizes.
+
+Post-test (single-test measurement): `geolift()` mirrors R's `GeoLift()` — augsynth-faithful
+fixed-effects / ridge SCM, conformal p-value, conformal-CI grid inversion with jackknife+
+fallback. Deterministic quantities match R to solver tolerance; the conformal p-value matches
+in the limit (identical residual vector). See post_test.py.
 
 Quick start
 -----------
@@ -29,9 +34,11 @@ from .market_selection import (
     best_markets,
     all_pairs,
 )
+from .post_test import geolift, GeoLiftResult
 
 __all__ = [
     "Panel", "ComboFit", "simulate_combo", "conformal_resids", "conformal_pval",
     "scm_weights", "power_curves", "best_markets", "all_pairs",
+    "geolift", "GeoLiftResult",
 ]
 __version__ = "0.1.0"

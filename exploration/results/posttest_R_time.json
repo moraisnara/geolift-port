@@ -1,0 +1,8 @@
+{
+  "point_pval_s": 13,
+  "with_ci_conformal_s": 18.78,
+  "ns": 1000,
+  "grid_size": 250,
+  "reps": "best-of-5 / best-of-3",
+  "note": "Single-threaded R GeoLift() wall time, best-of-N."
+}

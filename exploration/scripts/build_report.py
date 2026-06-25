@@ -234,6 +234,89 @@ def _pct(v):
     return "NA" if v is None else f"{round(100*v)}%"
 
 
+def build_posttest_compare():
+    d = load("posttest_compare.json")
+    s, eq, tm = d["setup"], d["equivalence"], d["timing"]
+    n, r = eq["none"], eq["ridge"]
+
+    def pair(key, f="{:.4f}"):  # "none_R → none_Py  |  ridge_R → ridge_Py"
+        return (f"{f.format(n[key + '_r'])} → {f.format(n[key + '_py'])}",
+                f"{f.format(r[key + '_r'])} → {f.format(r[key + '_py'])}")
+
+    att = pair("att"); inc = pair("incremental", "{:.2f}"); sl2 = pair("scaled_l2", "{:.5f}")
+    eq_rows = [
+        {"Quantity": "ATT (avg/period)", "none: R → Py": att[0], "ridge: R → Py": att[1],
+         "max diff": f"{n['att_rel_diff']:.0e} rel"},
+        {"Quantity": "Percent lift", "none: R → Py": f"{n['percent_lift_r']}% → {n['percent_lift_py']}%",
+         "ridge: R → Py": f"{r['percent_lift_r']}% → {r['percent_lift_py']}%", "max diff": "0"},
+        {"Quantity": "Incremental", "none: R → Py": inc[0], "ridge: R → Py": inc[1],
+         "max diff": f"{n['att_rel_diff']:.0e} rel"},
+        {"Quantity": "Scaled-L2 imbalance", "none: R → Py": sl2[0], "ridge: R → Py": sl2[1],
+         "max diff": "5e-08"},
+        {"Quantity": "Ridge λ (CV-selected)", "none: R → Py": "— (n/a)",
+         "ridge: R → Py": f"{r['lambda_r']:.4e} → {r['lambda_py']:.4e}",
+         "max diff": f"{r['lambda_rel_diff']:.0e} rel"},
+        {"Quantity": "Donor weights (38)", "none: R → Py": "vector match",
+         "ridge: R → Py": "vector match",
+         "max diff": f"{max(n['weights_max_abs_diff'], r['weights_max_abs_diff']):.0e}"},
+        {"Quantity": "Counterfactual ŷ (105)", "none: R → Py": "vector match",
+         "ridge: R → Py": "vector match",
+         "max diff": f"{max(n['yhat_max_abs_diff'], r['yhat_max_abs_diff']):.0e}"},
+        {"Quantity": "jackknife+ CI", "none: R → Py":
+            f"[{n['jackknife_ci_r'][0]:.2f}, {n['jackknife_ci_r'][1]:.2f}] → "
+            f"[{n['jackknife_ci_py'][0]:.2f}, {n['jackknife_ci_py'][1]:.2f}]",
+         "ridge: R → Py":
+            f"[{r['jackknife_ci_r'][0]:.2f}, {r['jackknife_ci_r'][1]:.2f}] → "
+            f"[{r['jackknife_ci_py'][0]:.2f}, {r['jackknife_ci_py'][1]:.2f}]",
+         "max diff": f"{max(n['jackknife_ci_max_abs_diff'], r['jackknife_ci_max_abs_diff']):.0e}"},
+        {"Quantity": "conformal p-value*", "none: R → Py":
+            f"{n['pvalue_r_ns1000_draw']} (1 draw) / {n['pvalue_limit_py']:.4f} (limit)",
+         "ridge: R → Py":
+            f"{r['pvalue_r_ns1000_draw']} (1 draw) / {r['pvalue_limit_py']:.4f} (limit)",
+         "max diff": f"{max(abs(n['pvalue_limit_py']-n['pvalue_limit_r_from_R_residuals']), abs(r['pvalue_limit_py']-r['pvalue_limit_r_from_R_residuals'])):.0e}"},
+    ]
+    eq_note = (
+        "\n\n_* The conformal p-value is the one Monte-Carlo quantity. Its **residual vector is "
+        f"identical** to R (max |Δ| {n['conformal_resid_max_abs_diff']:.0e}, solver tolerance), so the "
+        "limiting (infinite-resample) permutation p-value is identical — shown as `(limit)`, computed "
+        "from R's own residual vector and Python's, which agree. R's headline `0.0x` is a single "
+        f"`ns={s['ns']}` draw (MC SE ≈ 0.004), so it sits a fraction above the limit; two R runs with "
+        "different seeds would differ by as much. Every other quantity matches to solver tolerance "
+        "(OSQP vs R's `synth_qp`)._")
+
+    tbl_eq = md_table(eq_rows, headers=["Quantity", "none: R → Py", "ridge: R → Py", "max diff"]) + eq_note
+
+    py, rt = tm["python"], tm.get("r")
+    if rt:
+        sp = tm["speedup"]
+        time_rows = [
+            {"Task (single-threaded)": "ATT + p-value", "R `GeoLift()`": f"{rt['point_pval_s']} s",
+             "Python `geolift()`": f"{py['point_pval_s']} s", "speedup": f"**{sp['point_pval']:.0f}×** †"},
+            {"Task (single-threaded)": "+ conformal CI (250-grid)",
+             "R `GeoLift()`": f"{rt['with_ci_conformal_s']} s",
+             "Python `geolift()`": f"{py['with_ci_conformal_s']} s",
+             "speedup": f"**{sp['with_ci_conformal']:.1f}×**"},
+        ]
+        time_note = (
+            "\n\n_† R's `GeoLift()` obtains the headline p-value via `summary(augsynth)` → "
+            "`conformal_inf`, which **always computes the full per-period conformal CI grid** "
+            "(15 periods × 50-grid × 1000 refits) and discards it when CIs aren't requested — so the "
+            "point+p-value call is nearly as costly as the CI call. Python computes only the headline "
+            "p-value (one full-series refit + vectorized permutations). The clean apples-to-apples "
+            "number is the **conformal-CI row (both compute the same 250-grid): ~"
+            f"{sp['with_ci_conformal']:.1f}×**. Both are single-threaded, seed {s['seed']}; "
+            "deterministic results identical, p-value/CI equal in the limit._")
+        tbl_time = md_table(time_rows,
+                            headers=["Task (single-threaded)", "R `GeoLift()`",
+                                     "Python `geolift()`", "speedup"]) + time_note
+    else:
+        tbl_time = "_(run `time_posttest_R.R` then re-run `compare_posttest.py` to fill timing)_"
+
+    return (f"**Equivalence** ({s['example']}):\n\n" + tbl_eq
+            + "\n\n**Speed** (the post-test task, both at full `ns=1000` / 250-grid fidelity):\n\n"
+            + tbl_time)
+
+
 def build_fit_reuse_verify():
     d = load("fit_reuse_verify.json")
     s = d["setup"]
@@ -266,6 +349,7 @@ BUILDERS = {
     "market_selection_profile": build_market_selection_profile,
     "market_selection_python_compare": build_market_selection_python_compare,
     "citylift_compare": build_citylift_compare,
+    "posttest_compare": build_posttest_compare,
     "bench_scaling": build_bench_scaling,
     "fidelity": build_fidelity,
     "provenance": build_provenance,
