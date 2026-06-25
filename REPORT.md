@@ -437,6 +437,48 @@ resolve automatically. The high-level `power_curves()` returns the same tidy tab
 **original** package untouched, **modified** = parameter presets ([fast_presets.R](geolift_r_modified/fast_presets.R)),
 and now a **Python** library for the heavy combinatorial path.
 
+#### Function correspondence: GeoLift (R) → `geolift_fast` (Python)
+
+The port covers the **market-selection / power** path only (the combinatorial bottleneck of
+§6); the single-test measurement (`GeoLift`, `ConfIntervals`) and plotting helpers are out of
+scope by design. The mapping below is the public surface — see [geolift_py/README.md](geolift_py/README.md)
+for signatures.
+
+| GeoLift (R) — where | Purpose | `geolift_fast` (Python) |
+|---|---|---|
+| `GeoDataRead` — [pre_processing_data.R:42](geolift_r_original/R/pre_processing_data.R) | Long panel → indexed wide outcome matrix (`time = 1…T` in date order) | `Panel.from_long_df` / `Panel.from_long_csv` |
+| `GeoLiftMarketSelection` — [pre_test_power.R:1609](geolift_r_original/R/pre_test_power.R) | Top-level market selection over combos × windows × effect sizes | `power_curves` (+ `best_markets`) |
+| `…$PowerCurves` (its output) | Tidy per-cell table: p-value, power, ATT, scaled-L2 | return value of `power_curves` |
+| `…$BestMarkets` (its output) | Markets ranked by minimum detectable effect (MDE) | `best_markets` |
+| `N = c(k)` argument | Enumerate treatment groups of size *k* | `all_pairs(panel, size=k)` |
+| `GeoLiftPower` / `GeoLiftPower.search` — [pre_test_power.R:1430](geolift_r_original/R/pre_test_power.R) | Power simulation for a given/searched market set | `power_curves` (per-combo loop) |
+| `pvalueCalc` — [pre_test_power.R:251](geolift_r_original/R/pre_test_power.R) | Per-cell engine: SCM fit + ATT + conformal p-value | `simulate_combo` |
+| `run_simulations` — [pre_test_power.R:433](geolift_r_original/R/pre_test_power.R) | Iterate `pvalueCalc` over the cell grid | loop inside `power_curves` / `simulate_combo` |
+| `augsynth(...)` fixed-effects SCM — [auxiliary.R:361](geolift_r_original/R/auxiliary.R) | Simplex-constrained donor weights (OSQP QP) | `scm_weights` / `ComboFit` |
+| `augsynth:::compute_permute_pval` + `type_of_test` stat — [pre_test_power.R:180](geolift_r_original/R/pre_test_power.R) | Conformal "iid" permutation p-value (two-sided `sum｜x｜` stat) | `conformal_resids` + `conformal_pval` |
+| scaled-L2 imbalance (`augsynth` internal) | Fit-quality metric reported per cell | `ComboFit.scaled_l2` (`_scaled_l2`) |
+| `GeoLift` — [post_test_analysis.R:189](geolift_r_original/R/post_test_analysis.R) | Single-test lift measurement | *out of scope* (Tier 1 path; see §4) |
+| `ConfIntervals` — [post_test_analysis.R:682](geolift_r_original/R/post_test_analysis.R) | Conformal CIs for one test | *out of scope* |
+| `GeoPlot` / `plot.GeoLift` — [plots.R](geolift_r_original/R/plots.R) | Plotting | *out of scope* (use pandas/matplotlib on the output) |
+
+#### Worked example (mirrors the R walkthrough)
+
+[geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) is a runnable
+Jupyter notebook that walks the **same example as GeoLift's R market-selection walkthrough** —
+`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets` — step for step on the frozen example
+panel (24 markets × 220 periods), with each R call annotated alongside its `geolift_fast`
+equivalent. The condensed form:
+
+```python
+from geolift_fast import Panel, power_curves, best_markets, all_pairs
+
+panel  = Panel.from_long_csv("exploration/data/ms_subset_panel.csv")  # GeoDataRead
+combos = all_pairs(panel, size=2)                                     # N = c(2)
+pc     = power_curves(panel, combos, treatment_periods=14,            # GeoLiftMarketSelection
+                      effect_sizes=[-0.10, -0.05, 0.0, 0.05, 0.10], ns=1000, seed=42)
+best_markets(pc, alpha=0.10)                                          # $BestMarkets
+```
+
 ---
 
 ## 8. Status & next step
@@ -474,7 +516,7 @@ Geolift/
 ├── pyproject.toml        installable `geolift_fast` library (pip install git+… on GCP)
 ├── geolift_r_original/   Meta's GeoLift R package — reference, untouched
 ├── geolift_r_modified/   fast_presets.R — parameter presets for the UNMODIFIED engine
-├── geolift_py/           Python: geolift_fast/ library package + README + analysis scripts
+├── geolift_py/           Python: geolift_fast/ library package + README + example notebook + analysis scripts
 ├── exploration/          analysis
 │   ├── scripts/          R + Python scripts (everything reproducible lives here)
 │   ├── results/          *.json — the numbers this report renders from
@@ -500,4 +542,5 @@ From the `Geolift/` root:
 13. `exploration/scripts/bench_scaling_R.R <L> [ns]` — one R scaling point (fresh process; `ns=1000` original, `ns=100` modified) → `results/bench/bench_R_L<L>_ns<ns>.{json,csv}`.
 14. `geolift_py/bench_scaling.py` — Python timings + 3-way `fixest`-style scaling plot + agreement → `bench_scaling.json`, `bench_scaling.png`.
 15. `pip install -e .` (repo root) — install the **`geolift_fast`** library; see [geolift_py/README.md](geolift_py/README.md) for the GitHub/GCP recipe and API.
+16. [geolift_py/example_market_selection.ipynb](geolift_py/example_market_selection.ipynb) — runnable Jupyter walkthrough mirroring the R market-selection example (`GeoDataRead` → `GeoLiftMarketSelection` → `$BestMarkets`).
 9. `exploration/scripts/build_report.py` — render the tables above from the results.
